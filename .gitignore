@@ -1,3 +1,6 @@
+# Documentation
+/docs
+
 # Node.js
 node_modules/
 dist/
@@ -56,3 +59,6 @@ venv.bak/
 
 # OS
 Thumbs.db
+
+# Design Documents
+medlens_architecture.md

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Mail, Lock, AlertTriangle, Activity, Shield, ArrowRight } from 'lucide-react';
+import { Mail, Lock, AlertTriangle, Shield, ArrowRight } from 'lucide-react';
+
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
@@ -43,41 +44,41 @@ export const LoginPage: React.FC = () => {
     <div className="min-h-screen bg-white font-sans selection:bg-violet-100 flex">
       {/* Left Panel */}
       <div className="hidden lg:flex lg:w-1/2 xl:w-2/5 flex-col bg-gray-950 p-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_40%_60%,rgba(139,92,246,0.15),transparent)]" />
+        {/* Gradient blobs */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_70%,rgba(139,92,246,0.18),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_80%_20%,rgba(99,102,241,0.12),transparent)]" />
 
         <Link to="/" className="relative z-10 flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-            <Activity className="w-5 h-5 text-gray-900" />
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-500 flex items-center justify-center shadow-lg shadow-violet-900/30">
+            <span className="text-white font-black text-base leading-none">M</span>
           </div>
-          <span className="text-white font-bold text-lg">MedLens</span>
+          <span className="text-white font-bold text-lg tracking-tight">MedLens</span>
         </Link>
 
         <div className="flex-1 flex flex-col justify-center relative z-10">
           <div className="mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-3 py-1.5 mb-6">
-              <Shield className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="text-xs text-white/70 font-medium">Secure Access Portal</span>
+            <div className="inline-flex items-center gap-2 bg-violet-500/15 border border-violet-500/20 rounded-full px-3 py-1.5 mb-6">
+              <Shield className="w-3.5 h-3.5 text-violet-400" />
+              <span className="text-xs text-violet-300 font-medium">Secure Access</span>
             </div>
             <h2 className="text-4xl font-bold text-white tracking-tight leading-tight mb-4">
-              Clinical-grade<br />analysis, secured.
+              Smarter prescriptions.<br />Safer patients.
             </h2>
-            <p className="text-gray-400 text-base leading-relaxed max-w-sm">
-              Sign in to access your prescription analysis workspace, patient history, and clinical intelligence tools.
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              India's first AI-powered prescription safety tool — built for patients, pharmacists, and clinicians.
             </p>
           </div>
 
-          <div className="space-y-4 max-w-sm">
+          <div className="space-y-3.5 max-w-sm">
             {[
-              'Neural optical extraction for handwritten scripts',
-              'Pharmacovigilance across 54,000+ interaction pairs',
-              'PMJAY/CGHS formulary coverage intelligence',
-              'Encrypted patient health locker with QR access',
+              { emoji: '📷', text: 'Reads handwritten prescriptions instantly' },
+              { emoji: '⚠️', text: 'Checks 54,000+ drug interaction pairs' },
+              { emoji: '💊', text: 'Shows PMJAY/CGHS insurance coverage & generic savings' },
+              { emoji: '🔒', text: 'Secure health locker with emergency QR card' },
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-violet-500/20 border border-violet-500/30 flex items-center justify-center shrink-0 mt-0.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-violet-400" />
-                </div>
-                <span className="text-sm text-gray-400 leading-relaxed">{item}</span>
+              <div key={i} className="flex items-center gap-3 bg-white/5 border border-white/8 rounded-xl px-4 py-3">
+                <span className="text-lg leading-none">{item.emoji}</span>
+                <span className="text-sm text-gray-300 leading-snug">{item.text}</span>
               </div>
             ))}
           </div>
@@ -93,8 +94,8 @@ export const LoginPage: React.FC = () => {
         <div className="w-full max-w-sm">
           {/* Mobile logo */}
           <Link to="/" className="lg:hidden flex items-center gap-2.5 mb-10">
-            <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-              <Activity className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-md shadow-violet-200">
+              <span className="text-white font-black text-base leading-none">M</span>
             </div>
             <span className="text-gray-900 font-bold text-lg">MedLens</span>
           </Link>

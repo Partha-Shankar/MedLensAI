@@ -1,41 +1,3390 @@
-{
-  "rules": [
+[
     {
-      "drug_name": "Methotrexate",
-      "generic": "Methotrexate",
-      "adult_dose": {
-        "typical_dose_mg": 7.5,
-        "max_single_dose_mg": 25.0
-      },
-      "pediatric_dose": {
-        "max_single_dose_mg": 15.0
-      },
-      "dangerous_dose_multiplier": 2.0,
-      "renal_caution": true,
-      "renal_adjustment": "Reduce dose if CrCl < 50 ml/min",
-      "pregnancy_safe": false
+        "drug_name": "Digoxin",
+        "generic": "Digoxin",
+        "aliases": [
+            "Lanoxin",
+            "Digitalis"
+        ],
+        "adult_dose": {
+            "min_mg": 0.0625,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg": 1.5,
+            "typical_dose_mg": 0.25,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.01,
+            "max_single_dose_mg": 0.25,
+            "max_daily_mg_per_kg": 0.03,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Reduce dose by 50% in CrCl <50ml/min",
+        "hepatic_adjustment": "No adjustment needed",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 5,
+        "notes": "Toxicity signs: nausea, yellow vision, bradycardia, AV block. Fatal ventricular arrhythmias within 2-6 hours at 5mg IV.",
+        "common_frequencies": [
+            "OD",
+            "BD"
+        ],
+        "max_duration_days": 365
     },
     {
-      "drug_name": "Atorvastatin",
-      "generic": "Atorvastatin",
-      "adult_dose": {
-        "typical_dose_mg": 10.0,
-        "max_single_dose_mg": 80.0
-      },
-      "dangerous_dose_multiplier": 1.5,
-      "pregnancy_safe": false
+        "drug_name": "Colchicine",
+        "generic": "Colchicine",
+        "aliases": [
+            "Colcrys"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 1.2,
+            "max_daily_mg": 1.8,
+            "typical_dose_mg": 0.6,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.03,
+            "max_single_dose_mg": 0.3,
+            "max_daily_mg_per_kg": 0.06,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce by 50% if CrCl <30ml/min",
+        "hepatic_adjustment": "Avoid in severe impairment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 20,
+        "notes": "Multi-organ failure within 24-72 hours. Profuse diarrhea, bone marrow suppression, cardiac arrest.",
+        "common_frequencies": [
+            "OD",
+            "PRN"
+        ],
+        "max_duration_days": 7
     },
     {
-      "drug_name": "Paracetamol",
-      "generic": "Paracetamol",
-      "adult_dose": {
-        "typical_dose_mg": 500.0,
-        "max_single_dose_mg": 1000.0
-      },
-      "pediatric_dose": {
-        "max_single_dose_mg": 500.0
-      },
-      "dangerous_dose_multiplier": 4.0
+        "drug_name": "Methotrexate",
+        "generic": "Methotrexate",
+        "aliases": [
+            "MTX",
+            "Rheumatrex"
+        ],
+        "adult_dose": {
+            "min_mg": 7.5,
+            "max_single_dose_mg": 25,
+            "max_daily_mg": 25,
+            "typical_dose_mg": 15,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.3,
+            "max_single_dose_mg": 15,
+            "max_daily_mg_per_kg": 0.6,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Reduce 50% if CrCl <60ml/min",
+        "hepatic_adjustment": "Avoid in active liver disease",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": 100,
+        "notes": "Irreversible bone marrow suppression, mucositis, renal failure within 48 hours. Leucovorin rescue critical.",
+        "common_frequencies": [
+            "OW"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Warfarin",
+        "generic": "Warfarin",
+        "aliases": [
+            "Coumadin",
+            "Jantoven"
+        ],
+        "adult_dose": {
+            "min_mg": 1,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 5,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.3,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Monitor INR closely. Bleeding risk highest 3-5 days post-overdose. Vitamin K reversal.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Lithium",
+        "generic": "Lithium Carbonate",
+        "aliases": [
+            "Lithobid",
+            "Eskalith"
+        ],
+        "adult_dose": {
+            "min_mg": 300,
+            "max_single_dose_mg": 1200,
+            "max_daily_mg": 1800,
+            "typical_dose_mg": 900,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 15,
+            "max_single_dose_mg": 600,
+            "max_daily_mg_per_kg": 30,
+            "min_age_months": 144
+        },
+        "renal_adjustment": "Reduce dose; monitor levels",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": 30000,
+        "notes": "Toxicity >1.5mmol/L: tremor, ataxia. >3.0mmol/L: seizures, coma, renal failure within 24 hours.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Phenytoin",
+        "generic": "Phenytoin",
+        "aliases": [
+            "Dilantin",
+            "Phenytek"
+        ],
+        "adult_dose": {
+            "min_mg": 100,
+            "max_single_dose_mg": 300,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 5,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 10,
+            "min_age_months": 6
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Monitor levels",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 5000,
+        "notes": "Zero-order kinetics. Toxicity: nystagmus, ataxia, hypotension. Cardiac arrest at high IV rates.",
+        "common_frequencies": [
+            "OD",
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Theophylline",
+        "generic": "Theophylline",
+        "aliases": [
+            "Theo-Dur"
+        ],
+        "adult_dose": {
+            "min_mg": 100,
+            "max_single_dose_mg": 300,
+            "max_daily_mg": 600,
+            "typical_dose_mg": 200,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 5,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 20,
+            "min_age_months": 6
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose significantly",
+        "pregnancy_safe": true,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": 1000,
+        "notes": "Toxicity >20mcg/ml: seizures, arrhythmias. Fatal ventricular tachycardia within 4 hours.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Clozapine",
+        "generic": "Clozapine",
+        "aliases": [
+            "Clozaril"
+        ],
+        "adult_dose": {
+            "min_mg": 12.5,
+            "max_single_dose_mg": 200,
+            "max_daily_mg": 900,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Monitor LFTs; reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": 2000,
+        "notes": "Myocarditis risk. Seizures, coma, respiratory depression at overdose. Fatal agranulocytosis risk.",
+        "common_frequencies": [
+            "OD",
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Amiodarone",
+        "generic": "Amiodarone",
+        "aliases": [
+            "Cordarone",
+            "Pacerone"
+        ],
+        "adult_dose": {
+            "min_mg": 200,
+            "max_single_dose_mg": 400,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 200,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 5,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 10,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Monitor LFTs",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 5000,
+        "notes": "Hypotension, bradycardia with rapid IV. Pulmonary fibrosis with chronic use. QT prolongation.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Fentanyl",
+        "generic": "Fentanyl",
+        "aliases": [
+            "Sublimaze",
+            "Duragesic"
+        ],
+        "adult_dose": {
+            "min_mcg": 25,
+            "max_single_dose_mcg": 100,
+            "max_daily_mcg": 2400,
+            "typical_dose_mcg": 50,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 1,
+            "max_single_dose_mcg": 50,
+            "max_daily_mcg_per_kg": 10,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mcg": 2000,
+        "notes": "Respiratory arrest within 5-10 minutes. Pinpoint pupils, coma. Naloxone reversal.",
+        "common_frequencies": [
+            "PRN",
+            "Continuous"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Amlodipine",
+        "generic": "Amlodipine",
+        "aliases": [
+            "Norvasc"
+        ],
+        "adult_dose": {
+            "min_mg": 2.5,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 5,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.3,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Start low, titrate slowly",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Prolonged hypotension possible with massive overdose.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Metformin",
+        "generic": "Metformin",
+        "aliases": [
+            "Glucophage"
+        ],
+        "adult_dose": {
+            "min_mg": 500,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg": 2550,
+            "typical_dose_mg": 1000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 30,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "Avoid if CrCl <30ml/min",
+        "hepatic_adjustment": "Use cautiously",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Lactic acidosis risk in renal failure. GI symptoms common.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Ibuprofen",
+        "generic": "Ibuprofen",
+        "aliases": [
+            "Advil",
+            "Motrin",
+            "Brufen"
+        ],
+        "adult_dose": {
+            "min_mg": 200,
+            "max_single_dose_mg": 800,
+            "max_daily_mg": 3200,
+            "typical_dose_mg": 400,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 400,
+            "max_daily_mg_per_kg": 40,
+            "min_age_months": 6
+        },
+        "renal_adjustment": "Reduce dose in impairment",
+        "hepatic_adjustment": "Use cautiously",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 32000,
+        "notes": "GI bleeding, renal failure at high doses. Seizures possible.",
+        "common_frequencies": [
+            "TDS",
+            "QID",
+            "PRN"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Sertraline",
+        "generic": "Sertraline",
+        "aliases": [
+            "Zoloft"
+        ],
+        "adult_dose": {
+            "min_mg": 25,
+            "max_single_dose_mg": 200,
+            "max_daily_mg": 200,
+            "typical_dose_mg": 100,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1.5,
+            "max_single_dose_mg": 50,
+            "max_daily_mg_per_kg": 3,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Serotonin syndrome risk with MAOIs. QT prolongation at extreme doses.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Amoxicillin",
+        "generic": "Amoxicillin",
+        "aliases": [
+            "Amoxil",
+            "Moxatag"
+        ],
+        "adult_dose": {
+            "min_mg": 250,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg": 3000,
+            "typical_dose_mg": 500,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 25,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 90,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Reduce if CrCl <30ml/min",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Rash, diarrhea common. Anaphylaxis rare but serious.",
+        "common_frequencies": [
+            "TDS",
+            "BD"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Atorvastatin",
+        "generic": "Atorvastatin",
+        "aliases": [
+            "Lipitor"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 80,
+            "max_daily_mg": 80,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Avoid in active disease",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Myopathy, rhabdomyolysis risk. Monitor CK levels.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Salbutamol",
+        "generic": "Salbutamol",
+        "aliases": [
+            "Albuterol",
+            "Ventolin"
+        ],
+        "adult_dose": {
+            "min_mcg": 100,
+            "max_single_dose_mcg": 400,
+            "max_daily_mcg": 1600,
+            "typical_dose_mcg": 200,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 4,
+            "max_single_dose_mcg": 200,
+            "max_daily_mcg_per_kg": 12,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Tachycardia, tremor at high doses. Hypokalemia possible.",
+        "common_frequencies": [
+            "PRN",
+            "QID"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Omeprazole",
+        "generic": "Omeprazole",
+        "aliases": [
+            "Prilosec",
+            "Losec"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 40,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 2,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose in severe impairment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Long-term: B12 deficiency, fractures risk.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 56
+    },
+    {
+        "drug_name": "Losartan",
+        "generic": "Losartan",
+        "aliases": [
+            "Cozaar"
+        ],
+        "adult_dose": {
+            "min_mg": 25,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 100,
+            "typical_dose_mg": 50,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.7,
+            "max_single_dose_mg": 50,
+            "max_daily_mg_per_kg": 1.4,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Monitor potassium",
+        "hepatic_adjustment": "Start low",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Hyperkalemia, renal impairment risk.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Vitamin D3",
+        "generic": "Cholecalciferol",
+        "aliases": [
+            "Vitamin D"
+        ],
+        "adult_dose": {
+            "min_mcg": 400,
+            "max_single_dose_mcg": 50000,
+            "max_daily_mcg": 4000,
+            "typical_dose_mcg": 2000,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 10,
+            "max_single_dose_mcg": 2000,
+            "max_daily_mcg_per_kg": 50,
+            "min_age_months": 0
+        },
+        "renal_adjustment": "Monitor levels",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 10.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Hypercalcemia with chronic overdose.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Tramadol",
+        "generic": "Tramadol",
+        "aliases": [
+            "Ultram"
+        ],
+        "adult_dose": {
+            "min_mg": 50,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 100,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 2,
+            "max_single_dose_mg": 50,
+            "max_daily_mg_per_kg": 8,
+            "min_age_months": 144
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 1000,
+        "notes": "Seizures, serotonin syndrome. Respiratory depression within 1-2 hours.",
+        "common_frequencies": [
+            "QID",
+            "PRN"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Morphine",
+        "generic": "Morphine",
+        "aliases": [
+            "MST Continus"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 30,
+            "max_daily_mg": 360,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.5,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": 200,
+        "notes": "Respiratory failure within 20-30 minutes. Miosis, coma. Naloxone required.",
+        "common_frequencies": [
+            "QID",
+            "PRN"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Insulin",
+        "generic": "Insulin",
+        "aliases": [
+            "Humulin",
+            "Novolin"
+        ],
+        "adult_dose": {
+            "min_units": 4,
+            "max_single_dose_units": 40,
+            "max_daily_units": 100,
+            "typical_dose_units": 20,
+            "unit": "units"
+        },
+        "pediatric_dose": {
+            "units_per_kg": 0.5,
+            "max_single_dose_units": 20,
+            "max_daily_units_per_kg": 1,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_units": 500,
+        "notes": "Severe hypoglycemia \u2192 cerebral edema, cardiac arrest within 1-2 hours.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Verapamil",
+        "generic": "Verapamil",
+        "aliases": [
+            "Calan",
+            "Isoptin"
+        ],
+        "adult_dose": {
+            "min_mg": 40,
+            "max_single_dose_mg": 120,
+            "max_daily_mg": 480,
+            "typical_dose_mg": 80,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 40,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 1000,
+        "notes": "Bradycardia, heart block, hypotension. Fatal asystole within 30 minutes IV.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Quetiapine",
+        "generic": "Quetiapine",
+        "aliases": [
+            "Seroquel"
+        ],
+        "adult_dose": {
+            "min_mg": 25,
+            "max_single_dose_mg": 400,
+            "max_daily_mg": 800,
+            "typical_dose_mg": 200,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 3,
+            "max_single_dose_mg": 100,
+            "max_daily_mg_per_kg": 10,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 3000,
+        "notes": "Coma, respiratory depression, QT prolongation. Fatal arrhythmias possible.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Citalopram",
+        "generic": "Citalopram",
+        "aliases": [
+            "Celexa"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 40,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "QT prolongation risk >40mg/day.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Aspirin",
+        "generic": "Acetylsalicylic Acid",
+        "aliases": [
+            "Disprin"
+        ],
+        "adult_dose": {
+            "min_mg": 75,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg": 4000,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 15,
+            "max_single_dose_mg": 300,
+            "max_daily_mg_per_kg": 60,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Monitor",
+        "hepatic_adjustment": "Monitor",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 20000,
+        "notes": "Metabolic acidosis, tinnitus, cerebral edema. Fatal respiratory failure within 12 hours.",
+        "common_frequencies": [
+            "OD",
+            "BD",
+            "PRN"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Diazepam",
+        "generic": "Diazepam",
+        "aliases": [
+            "Valium"
+        ],
+        "adult_dose": {
+            "min_mg": 2,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 5,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 1,
+            "min_age_months": 6
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 500,
+        "notes": "Respiratory depression, coma within 1 hour. Flumazenil reversal.",
+        "common_frequencies": [
+            "PRN",
+            "TDS"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Carbamazepine",
+        "generic": "Carbamazepine",
+        "aliases": [
+            "Tegretol"
+        ],
+        "adult_dose": {
+            "min_mg": 100,
+            "max_single_dose_mg": 400,
+            "max_daily_mg": 1200,
+            "typical_dose_mg": 400,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 30,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Monitor levels",
+        "hepatic_adjustment": "Monitor LFTs",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 20000,
+        "notes": "Seizures, cardiac arrhythmias, coma. Fatal within 6-12 hours.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Hydrochlorothiazide",
+        "generic": "Hydrochlorothiazide",
+        "aliases": [
+            "HCTZ"
+        ],
+        "adult_dose": {
+            "min_mg": 12.5,
+            "max_single_dose_mg": 50,
+            "max_daily_mg": 50,
+            "typical_dose_mg": 25,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 25,
+            "max_daily_mg_per_kg": 3,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Avoid if CrCl <30ml/min",
+        "hepatic_adjustment": "Use cautiously",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Hypokalemia, hyponatremia risk.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Levothyroxine",
+        "generic": "Levothyroxine",
+        "aliases": [
+            "Synthroid",
+            "Eltroxin"
+        ],
+        "adult_dose": {
+            "min_mcg": 25,
+            "max_single_dose_mcg": 200,
+            "max_daily_mcg": 200,
+            "typical_dose_mcg": 100,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 4,
+            "max_single_dose_mcg": 100,
+            "max_daily_mcg_per_kg": 8,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Thyroid storm with massive chronic overdose.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Clonazepam",
+        "generic": "Clonazepam",
+        "aliases": [
+            "Klonopin",
+            "Rivotril"
+        ],
+        "adult_dose": {
+            "min_mg": 0.25,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 4,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.05,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg_per_kg": 0.2,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 100,
+        "notes": "Respiratory depression, coma. Fatal within 2 hours without support.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 90
+    },
+    {
+        "drug_name": "Risperidone",
+        "generic": "Risperidone",
+        "aliases": [
+            "Risperdal"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 6,
+            "max_daily_mg": 16,
+            "typical_dose_mg": 2,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.03,
+            "max_single_dose_mg": 2,
+            "max_daily_mg_per_kg": 0.1,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Extrapyramidal symptoms, QT prolongation.",
+        "common_frequencies": [
+            "OD",
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Ciprofloxacin",
+        "generic": "Ciprofloxacin",
+        "aliases": [
+            "Cipro"
+        ],
+        "adult_dose": {
+            "min_mg": 250,
+            "max_single_dose_mg": 750,
+            "max_daily_mg": 1500,
+            "typical_dose_mg": 500,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 20,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 60,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce dose if CrCl <30ml/min",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Tendon rupture risk. QT prolongation.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Simvastatin",
+        "generic": "Simvastatin",
+        "aliases": [
+            "Zocor"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 40,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Avoid in active disease",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Myopathy risk with fibrates.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Gabapentin",
+        "generic": "Gabapentin",
+        "aliases": [
+            "Neurontin"
+        ],
+        "adult_dose": {
+            "min_mg": 100,
+            "max_single_dose_mg": 600,
+            "max_daily_mg": 3600,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 300,
+            "max_daily_mg_per_kg": 50,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "Reduce dose significantly",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Sedation, respiratory depression with opioids.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Lisinopril",
+        "generic": "Lisinopril",
+        "aliases": [
+            "Zestril"
+        ],
+        "adult_dose": {
+            "min_mg": 2.5,
+            "max_single_dose_mg": 40,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 0.6,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Monitor potassium",
+        "hepatic_adjustment": "Use cautiously",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Angioedema risk. Hyperkalemia.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Escitalopram",
+        "generic": "Escitalopram",
+        "aliases": [
+            "Lexapro"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 20,
+            "max_daily_mg": 20,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 10,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "QT prolongation at high doses.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Cetirizine",
+        "generic": "Cetirizine",
+        "aliases": [
+            "Zyrtec"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.25,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.5,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 6.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Sedation at high doses.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Montelukast",
+        "generic": "Montelukast",
+        "aliases": [
+            "Singulair"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Neuropsychiatric effects reported.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Doxycycline",
+        "generic": "Doxycycline",
+        "aliases": [
+            "Vibramycin"
+        ],
+        "adult_dose": {
+            "min_mg": 100,
+            "max_single_dose_mg": 200,
+            "max_daily_mg": 200,
+            "typical_dose_mg": 100,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 4,
+            "max_single_dose_mg": 100,
+            "max_daily_mg_per_kg": 8,
+            "min_age_months": 96
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Photosensitivity. Esophageal irritation.",
+        "common_frequencies": [
+            "BD",
+            "OD"
+        ],
+        "max_duration_days": 21
+    },
+    {
+        "drug_name": "Fluconazole",
+        "generic": "Fluconazole",
+        "aliases": [
+            "Diflucan"
+        ],
+        "adult_dose": {
+            "min_mg": 50,
+            "max_single_dose_mg": 400,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 150,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 6,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 12,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Monitor LFTs",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "QT prolongation, hepatotoxicity.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Prednisolone",
+        "generic": "Prednisolone",
+        "aliases": [
+            "Prelone"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 60,
+            "max_daily_mg": 60,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 2,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Psychosis, hypertension with high doses.",
+        "common_frequencies": [
+            "OD",
+            "BD"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Allopurinol",
+        "generic": "Allopurinol",
+        "aliases": [
+            "Zyloprim"
+        ],
+        "adult_dose": {
+            "min_mg": 100,
+            "max_single_dose_mg": 300,
+            "max_daily_mg": 800,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 20,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Monitor LFTs",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Rash, SJS risk. Hypersensitivity syndrome.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Tamsulosin",
+        "generic": "Tamsulosin",
+        "aliases": [
+            "Flomax"
+        ],
+        "adult_dose": {
+            "min_mg": 0.4,
+            "max_single_dose_mg": 0.8,
+            "max_daily_mg": 0.8,
+            "typical_dose_mg": 0.4,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Intraoperative floppy iris syndrome.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Vitamin B12",
+        "generic": "Cyanocobalamin",
+        "aliases": [
+            "Vitamin B12"
+        ],
+        "adult_dose": {
+            "min_mcg": 1000,
+            "max_single_dose_mcg": 1000,
+            "max_daily_mcg": 1000,
+            "typical_dose_mcg": 1000,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 10,
+            "max_single_dose_mcg": 500,
+            "max_daily_mcg_per_kg": 20,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 10.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Very safe. Acneiform rash rare.",
+        "common_frequencies": [
+            "OW",
+            "IM"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Calcium Carbonate",
+        "generic": "Calcium Carbonate",
+        "aliases": [
+            "Tums"
+        ],
+        "adult_dose": {
+            "min_mg": 500,
+            "max_single_dose_mg": 2000,
+            "max_daily_mg": 4000,
+            "typical_dose_mg": 1000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 25,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 100,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Monitor",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Constipation, hypercalcemia with chronic use.",
+        "common_frequencies": [
+            "PRN",
+            "TDS"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Magnesium Oxide",
+        "generic": "Magnesium Oxide",
+        "aliases": [
+            "Mag-Ox"
+        ],
+        "adult_dose": {
+            "min_mg": 400,
+            "max_single_dose_mg": 800,
+            "max_daily_mg": 2400,
+            "typical_dose_mg": 400,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 40,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Avoid in renal failure",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Diarrhea, hypermagnesemia in renal failure.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Loperamide",
+        "generic": "Loperamide",
+        "aliases": [
+            "Imodium"
+        ],
+        "adult_dose": {
+            "min_mg": 2,
+            "max_single_dose_mg": 8,
+            "max_daily_mg": 16,
+            "typical_dose_mg": 4,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 2,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Use cautiously",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": 100,
+        "notes": "Fatal cardiac arrhythmias within 2-4 hours at high doses. QT prolongation.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 2
+    },
+    {
+        "drug_name": "Pseudoephedrine",
+        "generic": "Pseudoephedrine",
+        "aliases": [
+            "Sudafed"
+        ],
+        "adult_dose": {
+            "min_mg": 30,
+            "max_single_dose_mg": 60,
+            "max_daily_mg": 240,
+            "typical_dose_mg": 60,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 2,
+            "max_single_dose_mg": 30,
+            "max_daily_mg_per_kg": 12,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Hypertension, tachycardia.",
+        "common_frequencies": [
+            "QID"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Budesonide",
+        "generic": "Budesonide",
+        "aliases": [
+            "Pulmicort"
+        ],
+        "adult_dose": {
+            "min_mcg": 200,
+            "max_single_dose_mcg": 800,
+            "max_daily_mcg": 1600,
+            "typical_dose_mcg": 400,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 0.5,
+            "max_single_dose_mcg": 400,
+            "max_daily_mcg_per_kg": 1,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Oral thrush with inhaler.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Rosuvastatin",
+        "generic": "Rosuvastatin",
+        "aliases": [
+            "Crestor"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 40,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.2,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Avoid active disease",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Myopathy risk higher than other statins.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Venlafaxine",
+        "generic": "Venlafaxine",
+        "aliases": [
+            "Effexor"
+        ],
+        "adult_dose": {
+            "min_mg": 37.5,
+            "max_single_dose_mg": 225,
+            "max_daily_mg": 375,
+            "typical_dose_mg": 150,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 3000,
+        "notes": "Serotonin syndrome, seizures, hypertension. Fatal cardiac arrhythmias.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Duloxetine",
+        "generic": "Duloxetine",
+        "aliases": [
+            "Cymbalta"
+        ],
+        "adult_dose": {
+            "min_mg": 20,
+            "max_single_dose_mg": 60,
+            "max_daily_mg": 120,
+            "typical_dose_mg": 60,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "Avoid if CrCl <30ml/min",
+        "hepatic_adjustment": "Avoid",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Hepatotoxicity, serotonin syndrome.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Olanzapine",
+        "generic": "Olanzapine",
+        "aliases": [
+            "Zyprexa"
+        ],
+        "adult_dose": {
+            "min_mg": 2.5,
+            "max_single_dose_mg": 20,
+            "max_daily_mg": 20,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.3,
+            "min_age_months": 120
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 2000,
+        "notes": "Sedation, respiratory depression, NMS. Fatal within 4 hours.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Haloperidol",
+        "generic": "Haloperidol",
+        "aliases": [
+            "Haldol"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 5,
+            "max_daily_mg": 20,
+            "typical_dose_mg": 2,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.05,
+            "max_single_dose_mg": 2,
+            "max_daily_mg_per_kg": 0.15,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": 500,
+        "notes": "QT prolongation, torsades de pointes. Fatal ventricular fibrillation.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Amitriptyline",
+        "generic": "Amitriptyline",
+        "aliases": [
+            "Elavil"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 150,
+            "max_daily_mg": 150,
+            "typical_dose_mg": 50,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 1000,
+        "notes": "Anticholinergic toxicity, seizures, fatal cardiac arrhythmias within 2 hours.",
+        "common_frequencies": [
+            "OD",
+            "BD"
+        ],
+        "max_duration_days": 90
+    },
+    {
+        "drug_name": "Propranolol",
+        "generic": "Propranolol",
+        "aliases": [
+            "Inderal"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 80,
+            "max_daily_mg": 320,
+            "typical_dose_mg": 40,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 2000,
+        "notes": "Bradycardia, hypotension, bronchospasm. Fatal cardiac arrest within 1 hour.",
+        "common_frequencies": [
+            "TDS",
+            "QID"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Metoprolol",
+        "generic": "Metoprolol",
+        "aliases": [
+            "Lopressor"
+        ],
+        "adult_dose": {
+            "min_mg": 25,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 50,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 50,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 3000,
+        "notes": "Bradycardia, heart block. Glucagon reversal.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Atazanavir",
+        "generic": "Atazanavir",
+        "aliases": [
+            "Reyataz"
+        ],
+        "adult_dose": {
+            "min_mg": 200,
+            "max_single_dose_mg": 400,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 15,
+            "max_single_dose_mg": 200,
+            "max_daily_mg_per_kg": 30,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Hyperbilirubinemia, nephrolithiasis.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Cyclosporine",
+        "generic": "Cyclosporine",
+        "aliases": [
+            "Neoral",
+            "Sandimmune"
+        ],
+        "adult_dose": {
+            "min_mg": 50,
+            "max_single_dose_mg": 400,
+            "max_daily_mg": 800,
+            "typical_dose_mg": 200,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 4,
+            "max_single_dose_mg": 100,
+            "max_daily_mg_per_kg": 12,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Monitor levels",
+        "hepatic_adjustment": "Monitor levels",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Nephrotoxicity, hypertension. TDM essential.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Tacrolimus",
+        "generic": "Tacrolimus",
+        "aliases": [
+            "Prograf"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 5,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 3,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.15,
+            "max_single_dose_mg": 2,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Monitor levels",
+        "hepatic_adjustment": "Monitor levels",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Neurotoxicity, nephrotoxicity. TDM critical.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Sildenafil",
+        "generic": "Sildenafil",
+        "aliases": [
+            "Viagra"
+        ],
+        "adult_dose": {
+            "min_mg": 25,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 100,
+            "typical_dose_mg": 50,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Hypotension with nitrates. Priapism.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Tadalafil",
+        "generic": "Tadalafil",
+        "aliases": [
+            "Cialis"
+        ],
+        "adult_dose": {
+            "min_mg": 2.5,
+            "max_single_dose_mg": 20,
+            "max_daily_mg": 5,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Back pain, headache common.",
+        "common_frequencies": [
+            "OD",
+            "PRN"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Finasteride",
+        "generic": "Finasteride",
+        "aliases": [
+            "Propecia",
+            "Proscar"
+        ],
+        "adult_dose": {
+            "min_mg": 1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg": 5,
+            "typical_dose_mg": 5,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 10.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Teratogenic. Handle with care.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Oxycodone",
+        "generic": "Oxycodone",
+        "aliases": [
+            "OxyContin"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 30,
+            "max_daily_mg": 240,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.4,
+            "min_age_months": 144
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": 200,
+        "notes": "Respiratory arrest within 30 minutes. Naloxone essential.",
+        "common_frequencies": [
+            "QID",
+            "PRN"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Hydrocodone",
+        "generic": "Hydrocodone",
+        "aliases": [
+            "Vicodin"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 5,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation _safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": 150,
+        "notes": "Respiratory depression, fatal within 1 hour. Naloxone reversal.",
+        "common_frequencies": [
+            "QID"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Codeine",
+        "generic": "Codeine",
+        "aliases": [
+            "Tylenol #3"
+        ],
+        "adult_dose": {
+            "min_mg": 15,
+            "max_single_dose_mg": 60,
+            "max_daily_mg": 240,
+            "typical_dose_mg": 30,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.5,
+            "max_single_dose_mg": 15,
+            "max_daily_mg_per_kg": 3,
+            "min_age_months": 72
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 800,
+        "notes": "Respiratory failure, especially in CYP2D6 ultra-rapid metabolizers.",
+        "common_frequencies": [
+            "QID",
+            "PRN"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Buprenorphine",
+        "generic": "Buprenorphine",
+        "aliases": [
+            "Suboxone"
+        ],
+        "adult_dose": {
+            "min_mg": 0.3,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 24,
+            "typical_dose_mg": 8,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": true,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 32,
+        "notes": "Respiratory depression ceiling effect. Fatal with benzodiazepines.",
+        "common_frequencies": [
+            "OD"
+        ],
+        "max_duration_days": 365
+    },
+    {
+        "drug_name": "Alprazolam",
+        "generic": "Alprazolam",
+        "aliases": [
+            "Xanax"
+        ],
+        "adult_dose": {
+            "min_mg": 0.25,
+            "max_single_dose_mg": 1,
+            "max_daily_mg": 4,
+            "typical_dose_mg": 0.5,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 100,
+        "notes": "Coma, respiratory arrest within 2 hours. Flumazenil reversal.",
+        "common_frequencies": [
+            "TDS",
+            "PRN"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Lorazepam",
+        "generic": "Lorazepam",
+        "aliases": [
+            "Ativan"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 6,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.05,
+            "max_single_dose_mg": 1,
+            "max_daily_mg_per_kg": 0.2,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 200,
+        "notes": "Respiratory depression fatal with alcohol/opioids.",
+        "common_frequencies": [
+            "PRN",
+            "TDS"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Zolpidem",
+        "generic": "Zolpidem",
+        "aliases": [
+            "Ambien"
+        ],
+        "adult_dose": {
+            "min_mg": 5,
+            "max_single_dose_mg": 10,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 10,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Complex sleep behaviors. Respiratory depression with CNS depressants.",
+        "common_frequencies": [
+            "HS"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Midazolam",
+        "generic": "Midazolam",
+        "aliases": [
+            "Versed"
+        ],
+        "adult_dose": {
+            "min_mg": 1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg": 20,
+            "typical_dose_mg": 2,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.1,
+            "max_single_dose_mg": 2,
+            "max_daily_mg_per_kg": 0.5,
+            "min_age_months": 6
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 50,
+        "notes": "Rapid respiratory arrest within 5 minutes IV. Flumazenil.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Ketamine",
+        "generic": "Ketamine",
+        "aliases": [
+            "Ketalar"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 50,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 500,
+        "notes": "Hypertension, emergence delirium. Respiratory depression rare.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Propofol",
+        "generic": "Propofol",
+        "aliases": [
+            "Diprivan"
+        ],
+        "adult_dose": {
+            "min_mg": 20,
+            "max_single_dose_mg": 200,
+            "max_daily_mg": 4000,
+            "typical_dose_mg": 100,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 2.5,
+            "max_single_dose_mg": 50,
+            "max_daily_mg_per_kg": 10,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": 10000,
+        "notes": "Rapid IV push \u2192 fatal hypotension/respiratory arrest within 1 minute. Propofol infusion syndrome.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Etomidate",
+        "generic": "Etomidate",
+        "aliases": [
+            "Amidate"
+        ],
+        "adult_dose": {
+            "min_mg": 10,
+            "max_single_dose_mg": 20,
+            "max_daily_mg": 40,
+            "typical_dose_mg": 20,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.3,
+            "max_single_dose_mg": 10,
+            "max_daily_mg_per_kg": 1,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 200,
+        "notes": "Adrenal suppression. Myoclonus common.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Suxamethonium",
+        "generic": "Suxamethonium",
+        "aliases": [
+            "Succinylcholine"
+        ],
+        "adult_dose": {
+            "min_mg": 20,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 200,
+            "typical_dose_mg": 100,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": 500,
+        "notes": "Fatal hyperkalemia in susceptible patients. Malignant hyperthermia.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Rocuronium",
+        "generic": "Rocuronium",
+        "aliases": [
+            "Esmeron"
+        ],
+        "adult_dose": {
+            "min_mg": 30,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 50,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.6,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 2,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Prolonged effect",
+        "hepatic_adjustment": "Prolonged effect",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Prolonged paralysis without reversal. Sugammadex.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Adenosine",
+        "generic": "Adenosine",
+        "aliases": [
+            "Adenocard"
+        ],
+        "adult_dose": {
+            "min_mg": 6,
+            "max_single_dose_mg": 12,
+            "max_daily_mg": 36,
+            "typical_dose_mg": 6,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.01,
+            "max_single_dose_mg": 0.3,
+            "max_daily_mg_per_kg": 0.03,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 100,
+        "notes": "Asystole for 5-10 seconds normal. Fatal in asthma.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Lidocaine",
+        "generic": "Lidocaine",
+        "aliases": [
+            "Xylocaine"
+        ],
+        "adult_dose": {
+            "min_mg": 50,
+            "max_single_dose_mg": 200,
+            "max_daily_mg": 800,
+            "typical_dose_mg": 100,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": 500,
+        "notes": "Seizures, coma, cardiac arrest within 30 minutes.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Bupivacaine",
+        "generic": "Bupivacaine",
+        "aliases": [
+            "Marcaine"
+        ],
+        "adult_dose": {
+            "min_mg": 25,
+            "max_single_dose_mg": 175,
+            "max_daily_mg": 400,
+            "typical_dose_mg": 75,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 2,
+            "max_single_dose_mg": 50,
+            "max_daily_mg_per_kg": 4,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 1.5,
+        "instantly_fatal_single_dose_mg": 300,
+        "notes": "Fatal cardiac arrhythmias within 5-10 minutes. Lipid emulsion rescue.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Epinephrine",
+        "generic": "Epinephrine",
+        "aliases": [
+            "Adrenaline"
+        ],
+        "adult_dose": {
+            "min_mcg": 100,
+            "max_single_dose_mcg": 1000,
+            "max_daily_mcg": 5000,
+            "typical_dose_mcg": 300,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 10,
+            "max_single_dose_mcg": 100,
+            "max_daily_mcg_per_kg": 50,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mcg": 10000,
+        "notes": "Fatal ventricular fibrillation within 1 minute IV.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Norepinephrine",
+        "generic": "Norepinephrine",
+        "aliases": [
+            "Levophed"
+        ],
+        "adult_dose": {
+            "min_mcg": 4,
+            "max_single_dose_mcg": 20,
+            "max_daily_mcg": 100,
+            "typical_dose_mcg": 8,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 0.1,
+            "max_single_dose_mcg": 2,
+            "max_daily_mcg_per_kg": 0.5,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mcg": 100,
+        "notes": "Fatal hypertension, tissue necrosis with extravasation.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Dobutamine",
+        "generic": "Dobutamine",
+        "aliases": [
+            "Dobutrex"
+        ],
+        "adult_dose": {
+            "min_mcg": 2.5,
+            "max_single_dose_mcg": 20,
+            "max_daily_mcg": 100,
+            "typical_dose_mcg": 5,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 5,
+            "max_single_dose_mcg": 10,
+            "max_daily_mcg_per_kg": 20,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjust ment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Tachycardia, arrhythmias.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Milrinone",
+        "generic": "Milrinone",
+        "aliases": [
+            "Primacor"
+        ],
+        "adult_dose": {
+            "min_mcg": 12.5,
+            "max_single_dose_mcg": 50,
+            "max_daily_mcg": 200,
+            "typical_dose_mcg": 25,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 0.75,
+            "max_single_dose_mcg": 20,
+            "max_daily_mcg_per_kg": 3,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Hypotension, ventricular arrhythmias.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Vasopressin",
+        "generic": "Vasopressin",
+        "aliases": [
+            "Pitressin"
+        ],
+        "adult_dose": {
+            "min_units": 0.1,
+            "max_single_dose_units": 0.4,
+            "max_daily_units": 2,
+            "typical_dose_units": 0.04,
+            "unit": "units"
+        },
+        "pediatric_dose": {
+            "units_per_kg": 0.004,
+            "max_single_dose_units": 0.1,
+            "max_daily_units_per_kg": 0.02,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_units": 10,
+        "notes": "Myocardial ischemia, fatal arrhythmias.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Magnesium Sulfate",
+        "generic": "Magnesium Sulfate",
+        "aliases": [
+            "Epsom Salt"
+        ],
+        "adult_dose": {
+            "min_mg": 1000,
+            "max_single_dose_mg": 6000,
+            "max_daily_mg": 12000,
+            "typical_dose_mg": 2000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 25,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg_per_kg": 100,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Avoid in renal failure",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": 25000,
+        "notes": "Respiratory paralysis, complete heart block within 30 minutes.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Potassium Chloride",
+        "generic": "Potassium Chloride",
+        "aliases": [
+            "KCl"
+        ],
+        "adult_dose": {
+            "min_mmol": 10,
+            "max_single_dose_mmol": 40,
+            "max_daily_mmol": 200,
+            "typical_dose_mmol": 20,
+            "unit": "mmol"
+        },
+        "pediatric_dose": {
+            "mmol_per_kg": 0.5,
+            "max_single_dose_mmol": 20,
+            "max_daily_mmol_per_kg": 3,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Avoid in renal failure",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mmol": 100,
+        "notes": "Fatal ventricular fibrillation within 5 minutes rapid IV.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Sodium Bicarbonate",
+        "generic": "Sodium Bicarbonate",
+        "aliases": [
+            "Baking Soda"
+        ],
+        "adult_dose": {
+            "min_mmol": 50,
+            "max_single_dose_mmol": 200,
+            "max_daily_mmol": 600,
+            "typical_dose_mmol": 100,
+            "unit": "mmol"
+        },
+        "pediatric_dose": {
+            "mmol_per_kg": 1,
+            "max_single_dose_mmol": 50,
+            "max_daily_mmol_per_kg": 4,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Use cautiously",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mmol": null,
+        "notes": "Metabolic alkalosis, hypernatremia.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Heparin",
+        "generic": "Heparin",
+        "aliases": [
+            "Unfractionated Heparin"
+        ],
+        "adult_dose": {
+            "min_units": 5000,
+            "max_single_dose_units": 10000,
+            "max_daily_units": 40000,
+            "typical_dose_units": 5000,
+            "unit": "units"
+        },
+        "pediatric_dose": {
+            "units_per_kg": 50,
+            "max_single_dose_units": 1000,
+            "max_daily_units_per_kg": 200,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "Monitor aPTT",
+        "hepatic_adjustment": "Monitor aPTT",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_units": null,
+        "notes": "HIT, bleeding. Protamine reversal.",
+        "common_frequencies": [
+            "BD",
+            "Continuous"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Enoxaparin",
+        "generic": "Enoxaparin",
+        "aliases": [
+            "Lovenox"
+        ],
+        "adult_dose": {
+            "min_mg": 30,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 200,
+            "typical_dose_mg": 60,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 1,
+            "max_single_dose_mg": 20,
+            "max_daily_mg_per_kg": 3,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Reduce dose CrCl <30ml/min",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Bleeding risk. No specific reversal.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Abciximab",
+        "generic": "Abciximab",
+        "aliases": [
+            "ReoPro"
+        ],
+        "adult_dose": {
+            "min_mcg": 250,
+            "max_single_dose_mcg": 10000,
+            "max_daily_mcg": 50000,
+            "typical_dose_mcg": 10000,
+            "unit": "mcg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Severe bleeding risk. Platelet transfusion.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Alteplase",
+        "generic": "Alteplase",
+        "aliases": [
+            "tPA"
+        ],
+        "adult_dose": {
+            "min_mg": 50,
+            "max_single_dose_mg": 100,
+            "max_daily_mg": 100,
+            "typical_dose_mg": 90,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.1,
+            "max_single_dose_mg": 5,
+            "max_daily_mg_per_kg": 0.3,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Intracranial hemorrhage risk within 24 hours.",
+        "common_frequencies": [
+            "Single"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Tranexamic Acid",
+        "generic": "Tranexamic Acid",
+        "aliases": [
+            "Cyklokapron"
+        ],
+        "adult_dose": {
+            "min_mg": 500,
+            "max_single_dose_mg": 2000,
+            "max_daily_mg": 4000,
+            "typical_dose_mg": 1000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 40,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Reduce dose",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Thrombosis risk.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Desmopressin",
+        "generic": "Desmopressin",
+        "aliases": [
+            "DDAVP"
+        ],
+        "adult_dose": {
+            "min_mcg": 10,
+            "max_single_dose_mcg": 40,
+            "max_daily_mcg": 120,
+            "typical_dose_mcg": 20,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 0.3,
+            "max_single_dose_mcg": 10,
+            "max_daily_mcg_per_kg": 1,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "Avoid",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Hyponatremia, seizures.",
+        "common_frequencies": [
+            "BD",
+            "TDS"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Octreotide",
+        "generic": "Octreotide",
+        "aliases": [
+            "Sandostatin"
+        ],
+        "adult_dose": {
+            "min_mcg": 50,
+            "max_single_dose_mcg": 200,
+            "max_daily_mcg": 1500,
+            "typical_dose_mcg": 100,
+            "unit": "mcg"
+        },
+        "pediatric_dose": {
+            "mcg_per_kg": 2,
+            "max_single_dose_mcg": 50,
+            "max_daily_mcg_per_kg": 10,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mcg": null,
+        "notes": "Gallstones, bradycardia.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 30
+    },
+    {
+        "drug_name": "Terlipressin",
+        "generic": "Terlipressin",
+        "aliases": [
+            "Glypressin"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 12,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": null,
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Ischemic complications.",
+        "common_frequencies": [
+            "QID"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Methylene Blue",
+        "generic": "Methylene Blue",
+        "aliases": [
+            "ProvayBlue"
+        ],
+        "adult_dose": {
+            "min_mg": 1,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 7,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.02,
+            "max_single_dose_mg": 1,
+            "max_daily_mg_per_kg": 0.1,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": 20,
+        "notes": "Serotonin syndrome with SSRIs. Hemolysis in G6PD deficiency.",
+        "common_frequencies": [
+            "Single"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Flumazenil",
+        "generic": "Flumazenil",
+        "aliases": [
+            "Romazicon"
+        ],
+        "adult_dose": {
+            "min_mg": 0.2,
+            "max_single_dose_mg": 1,
+            "max_daily_mg": 3,
+            "typical_dose_mg": 0.5,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.01,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg_per_kg": 0.05,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "Reduce dose",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Seizures in chronic benzo users.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Naloxone",
+        "generic": "Naloxone",
+        "aliases": [
+            "Narcan"
+        ],
+        "adult_dose": {
+            "min_mg": 0.4,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 0.4,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.01,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg_per_kg": 0.1,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Precipitated withdrawal.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Atropine",
+        "generic": "Atropine",
+        "aliases": [
+            "Atropen"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 10,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.02,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg_per_kg": 0.1,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": 100,
+        "notes": "Delirium, hyperthermia, fatal arrhythmias.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Physostigmine",
+        "generic": "Physostigmine",
+        "aliases": [
+            "Eserine"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 2,
+            "max_daily_mg": 4,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.02,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg_per_kg": 0.1,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": 10,
+        "notes": "Cholinergic crisis, asystole.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Glucagon",
+        "generic": "Glucagon",
+        "aliases": [
+            "GlucaGen"
+        ],
+        "adult_dose": {
+            "min_mg": 0.5,
+            "max_single_dose_mg": 1,
+            "max_daily_mg": 5,
+            "typical_dose_mg": 1,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 0.03,
+            "max_single_dose_mg": 0.5,
+            "max_daily_mg_per_kg": 0.1,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Vomiting common.",
+        "common_frequencies": [
+            "PRN"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Pralidoxime",
+        "generic": "Pralidoxime",
+        "aliases": [
+            "2-PAM"
+        ],
+        "adult_dose": {
+            "min_g": 1,
+            "max_single_dose_g": 2,
+            "max_daily_g": 12,
+            "typical_dose_g": 1,
+            "unit": "g"
+        },
+        "pediatric_dose": {
+            "g_per_kg": 0.03,
+            "max_single_dose_g": 1,
+            "max_daily_g_per_kg": 0.1,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_g": null,
+        "notes": "Use with atropine for OP poisoning.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Hydroxocobalamin",
+        "generic": "Hydroxocobalamin",
+        "aliases": [
+            "Cyanokit"
+        ],
+        "adult_dose": {
+            "min_g": 5,
+            "max_single_dose_g": 10,
+            "max_daily_g": 10,
+            "typical_dose_g": 5,
+            "unit": "g"
+        },
+        "pediatric_dose": {
+            "g_per_kg": 0.07,
+            "max_single_dose_g": 2.5,
+            "max_daily_g_per_kg": 0.15,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_g": null,
+        "notes": "Cyanide antidote. Red urine.",
+        "common_frequencies": [
+            "Single"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Sodium Thiosulfate",
+        "generic": "Sodium Thiosulfate",
+        "aliases": [
+            "Cyanide antidote"
+        ],
+        "adult_dose": {
+            "min_g": 12.5,
+            "max_single_dose_g": 25,
+            "max_daily_g": 50,
+            "typical_dose_g": 12.5,
+            "unit": "g"
+        },
+        "pediatric_dose": {
+            "g_per_kg": 0.4,
+            "max_single_dose_g": 5,
+            "max_daily_g_per_kg": 1,
+            "min_age_months": 1
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": true,
+        "lactation_safe": true,
+        "dangerous_dose_multiplier": 5.0,
+        "instantly_fatal_single_dose_g": null,
+        "notes": "Cyanide antidote component.",
+        "common_frequencies": [
+            "Single"
+        ],
+        "max_duration_days": 1
+    },
+    {
+        "drug_name": "Deferoxamine",
+        "generic": "Deferoxamine",
+        "aliases": [
+            "Desferal"
+        ],
+        "adult_dose": {
+            "min_mg": 1000,
+            "max_single_dose_mg": 6000,
+            "max_daily_mg": 6000,
+            "typical_dose_mg": 2000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 15,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg_per_kg": 40,
+            "min_age_months": 36
+        },
+        "renal_adjustment": "Avoid",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Iron chelator. ARDS risk with rapid infusion.",
+        "common_frequencies": [
+            "Continuous"
+        ],
+        "max_duration_days": 7
+    },
+    {
+        "drug_name": "Succimer",
+        "generic": "Succimer",
+        "aliases": [
+            "Chemet"
+        ],
+        "adult_dose": {
+            "min_mg": 500,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg": 3000,
+            "typical_dose_mg": 1000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 10,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 40,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 4.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Lead chelator. Neutropenia.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 21
+    },
+    {
+        "drug_name": "Dimercaprol",
+        "generic": "Dimercaprol",
+        "aliases": [
+            "BAL"
+        ],
+        "adult_dose": {
+            "min_mg": 150,
+            "max_single_dose_mg": 450,
+            "max_daily_mg": 1350,
+            "typical_dose_mg": 300,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 3,
+            "max_single_dose_mg": 100,
+            "max_daily_mg_per_kg": 10,
+            "min_age_months": 12
+        },
+        "renal_adjustment": "No adjustment",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 3.0,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "IM only. Painful injection. Hypertension.",
+        "common_frequencies": [
+            "TDS"
+        ],
+        "max_duration_days": 14
+    },
+    {
+        "drug_name": "Edetate Calcium Disodium",
+        "generic": "Edetate Calcium Disodium",
+        "aliases": [
+            "Calcium EDTA"
+        ],
+        "adult_dose": {
+            "min_mg": 500,
+            "max_single_dose_mg": 1000,
+            "max_daily_mg": 3000,
+            "typical_dose_mg": 1000,
+            "unit": "mg"
+        },
+        "pediatric_dose": {
+            "mg_per_kg": 20,
+            "max_single_dose_mg": 500,
+            "max_daily_mg_per_kg": 60,
+            "min_age_months": 24
+        },
+        "renal_adjustment": "Avoid",
+        "hepatic_adjustment": "No adjustment",
+        "pregnancy_safe": false,
+        "lactation_safe": false,
+        "dangerous_dose_multiplier": 2.5,
+        "instantly_fatal_single_dose_mg": null,
+        "notes": "Lead chelator. Nephrotoxicity.",
+        "common_frequencies": [
+            "BD"
+        ],
+        "max_duration_days": 14
     }
-  ]
-}
+]

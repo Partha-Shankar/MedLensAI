@@ -6,6 +6,9 @@ import { SignupPage } from './pages/SignupPage';
 import { HistoryPage } from './pages/HistoryPage';
 import { ProfilePage } from './pages/ProfilePage';
 import { PublicMedicalCardPage } from './pages/PublicMedicalCardPage';
+import { SettingsPage } from './pages/SettingsPage';
+import { NotificationsPage } from './pages/NotificationsPage';
+import { HelpPage } from './pages/HelpPage';
 import { Layout } from './components/Layout';
 import { UploadScreen } from './components/UploadScreen';
 import { ProcessingScreen } from './components/ProcessingScreen';
@@ -111,6 +114,9 @@ export default function App() {
         <Route path="/app" element={<ProtectedRoute><PrescriptionAnalyzer /></ProtectedRoute>} />
         <Route path="/history" element={<ProtectedRoute><HistoryPage /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+        <Route path="/settings" element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
+        <Route path="/notifications" element={<ProtectedRoute><NotificationsPage /></ProtectedRoute>} />
+        <Route path="/help" element={<ProtectedRoute><HelpPage /></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
