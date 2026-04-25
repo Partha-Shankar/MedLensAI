@@ -67,6 +67,24 @@ We have designed a clean, intuitive, and professional UI tailored for both patie
 
 ---
 
+## 📊 Architecture Diagrams
+
+We have documented the system flows to give a clear understanding of the backend and AI integration processes. Place your diagram PNG files in the `architecture` folder and name them accordingly.
+
+### Overall System Architecture
+*(Upload your overall system architecture diagram here)*
+![Overall System Architecture](architecture/overall-architecture.png)
+
+### OCR & Extraction Pipeline
+*(Upload your OCR pipeline diagram here)*
+![OCR & Extraction Pipeline](architecture/ocr-pipeline.png)
+
+### RxGuard Chatbot Architecture
+*(Upload your chatbot architecture diagram here)*
+![RxGuard Chatbot Architecture](architecture/chatbot-architecture.png)
+
+---
+
 ## 🚀 Getting Started
 
 Follow these steps to run MedLens AI locally:
