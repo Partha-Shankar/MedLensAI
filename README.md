@@ -1,5 +1,9 @@
 # MedLens AI
 
+> [!IMPORTANT]
+> 🚀 **Witness the Future of Clinical Safety:** See how MedLens AI turns illegible prescriptions into life-saving insights within seconds!
+> 🎥 **[Watch the Full Demo on YouTube](https://youtu.be/-zR9KAvdFew)**
+
 MedLens AI is a comprehensive, full-stack clinical decision support application designed specifically for the Indian healthcare market. It addresses the critical intersection of handwritten prescription legibility, patient medication safety, and insurance opacity that creates preventable harm every day.
 
 Built with a modern React frontend and a fast Python backend powered by Gemini 2.5 Flash OCR, MedLens AI acts as a digital health assistant. It digitizes paper prescriptions, corrects errors, and runs a multi-layer clinical analysis pipeline—all within seconds.
