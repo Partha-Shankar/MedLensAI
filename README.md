@@ -1,8 +1,12 @@
 # MedLens AI
 
-> [!IMPORTANT]
-> 🚀 **Witness the Future of Clinical Safety:** See how MedLens AI turns illegible prescriptions into life-saving insights within seconds!
-> 🎥 **[Watch the Full Demo on YouTube](https://youtu.be/-zR9KAvdFew)**
+<div align="center">
+  <a href="https://youtu.be/-zR9KAvdFew">
+    <img src="https://img.shields.io/badge/YouTube-Watch_Full_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube" />
+  </a>
+  <br />
+  <strong>🚀 Witness the Future of Clinical Safety: See how MedLens AI turns illegible prescriptions into life-saving insights within seconds!</strong>
+</div>
 
 MedLens AI is a comprehensive, full-stack clinical decision support application designed specifically for the Indian healthcare market. It addresses the critical intersection of handwritten prescription legibility, patient medication safety, and insurance opacity that creates preventable harm every day.
 
