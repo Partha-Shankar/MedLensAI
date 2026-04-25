@@ -1,0 +1,619 @@
+[
+  {
+    "brand": "Calpol",
+    "generic": "Paracetamol",
+    "category": "Analgesic/Antipyretic",
+    "drug_class": "Non-opioid analgesic",
+    "common_uses": [
+      "Fever",
+      "Mild to moderate pain",
+      "Headache"
+    ],
+    "standard_doses": [
+      "500mg",
+      "650mg",
+      "1000mg"
+    ],
+    "max_daily_dose_mg": 4000,
+    "dose_per_kg_mg": 15,
+    "min_age_years": 0,
+    "routes": [
+      "oral",
+      "rectal",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": false,
+    "hepatic_caution": true,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Nausea",
+      "Rash",
+      "Hepatotoxicity (overdose)"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Alcohol",
+        "interaction_type": "hepatotoxicity_risk",
+        "severity": "MODERATE",
+        "recommendation": "Avoid alcohol — increases liver damage risk"
+      }
+    ],
+    "aliases": [
+      "Paracetamol",
+      "Acetaminophen",
+      "Parcetamol",
+      "Paracitamol",
+      "Paracetmol",
+      "Crocin",
+      "Dolo",
+      "Fepanil"
+    ],
+    "indian_brands": [
+      "Calpol",
+      "Crocin",
+      "Dolo 650",
+      "Fepanil",
+      "P-500"
+    ],
+    "otc_available": true,
+    "pmjay_covered": true,
+    "brand_price_inr": 30,
+    "generic_price_inr": 8
+  },
+  {
+    "brand": "Crocin",
+    "generic": "Paracetamol",
+    "category": "Analgesic/Antipyretic",
+    "drug_class": "Non-opioid analgesic",
+    "common_uses": [
+      "Fever",
+      "Body pain",
+      "Cold-related discomfort"
+    ],
+    "standard_doses": [
+      "500mg",
+      "650mg"
+    ],
+    "max_daily_dose_mg": 4000,
+    "dose_per_kg_mg": 15,
+    "min_age_years": 0,
+    "routes": [
+      "oral"
+    ],
+    "controlled_substance": false,
+    "renal_caution": false,
+    "hepatic_caution": true,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Nausea",
+      "Vomiting",
+      "Liver toxicity in overdose"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Alcohol",
+        "interaction_type": "hepatotoxicity_risk",
+        "severity": "MODERATE",
+        "recommendation": "Avoid frequent alcohol consumption"
+      }
+    ],
+    "aliases": [
+      "Crocin",
+      "Paracetamol",
+      "Acetaminophen",
+      "Parcetamol",
+      "Crocine"
+    ],
+    "indian_brands": [
+      "Crocin",
+      "Calpol",
+      "Dolo 650",
+      "P-500"
+    ],
+    "otc_available": true,
+    "pmjay_covered": true,
+    "brand_price_inr": 28,
+    "generic_price_inr": 8
+  },
+  {
+    "brand": "Combiflam",
+    "generic": "Ibuprofen + Paracetamol",
+    "category": "Analgesic/Antipyretic",
+    "drug_class": "NSAID combination",
+    "common_uses": [
+      "Pain",
+      "Fever",
+      "Inflammation"
+    ],
+    "standard_doses": [
+      "400mg + 325mg"
+    ],
+    "max_daily_dose_mg": 3200,
+    "dose_per_kg_mg": 10,
+    "min_age_years": 12,
+    "routes": [
+      "oral"
+    ],
+    "controlled_substance": false,
+    "renal_caution": true,
+    "hepatic_caution": true,
+    "pregnancy_category": "C",
+    "common_side_effects": [
+      "Gastritis",
+      "Nausea",
+      "Kidney stress"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Spicy food",
+        "interaction_type": "gastric_irritation",
+        "severity": "MILD",
+        "recommendation": "Take after food to reduce stomach irritation"
+      }
+    ],
+    "aliases": [
+      "Combiflam",
+      "Combi flam",
+      "Combiflam tablet",
+      "Ibuprofen Paracetamol"
+    ],
+    "indian_brands": [
+      "Combiflam",
+      "Flexon",
+      "Ibugesic Plus"
+    ],
+    "otc_available": true,
+    "pmjay_covered": false,
+    "brand_price_inr": 42,
+    "generic_price_inr": 15
+  },
+  {
+    "brand": "Augmentin",
+    "generic": "Amoxicillin + Clavulanic Acid",
+    "category": "Antibiotics",
+    "drug_class": "Penicillin antibiotic",
+    "common_uses": [
+      "Respiratory infections",
+      "ENT infections",
+      "Skin infections"
+    ],
+    "standard_doses": [
+      "625mg",
+      "1g"
+    ],
+    "max_daily_dose_mg": 3000,
+    "dose_per_kg_mg": 25,
+    "min_age_years": 0,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": true,
+    "hepatic_caution": true,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Diarrhea",
+      "Nausea",
+      "Rash"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Heavy meals",
+        "interaction_type": "absorption_delay",
+        "severity": "MILD",
+        "recommendation": "Can be taken with food to reduce gastric upset"
+      }
+    ],
+    "aliases": [
+      "Amoxicillin",
+      "Amoxycillin",
+      "Amoxcillin",
+      "Augmentin",
+      "Amox-clav"
+    ],
+    "indian_brands": [
+      "Augmentin",
+      "Moxikind-CV",
+      "Clavam",
+      "Amoxyclav"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 190,
+    "generic_price_inr": 65
+  },
+  {
+    "brand": "Azithral",
+    "generic": "Azithromycin",
+    "category": "Antibiotics",
+    "drug_class": "Macrolide antibiotic",
+    "common_uses": [
+      "Throat infection",
+      "Chest infection",
+      "Skin infection"
+    ],
+    "standard_doses": [
+      "250mg",
+      "500mg"
+    ],
+    "max_daily_dose_mg": 500,
+    "dose_per_kg_mg": 10,
+    "min_age_years": 1,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": false,
+    "hepatic_caution": true,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Loose stools",
+      "Nausea",
+      "QT prolongation"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Antacids containing aluminum",
+        "interaction_type": "reduced_absorption",
+        "severity": "MODERATE",
+        "recommendation": "Separate dosing by at least 2 hours"
+      }
+    ],
+    "aliases": [
+      "Azithromycin",
+      "Azithromycin",
+      "Azithro",
+      "Azithral",
+      "Azee"
+    ],
+    "indian_brands": [
+      "Azithral",
+      "Azee",
+      "Zithrox",
+      "Azax"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 110,
+    "generic_price_inr": 28
+  },
+  {
+    "brand": "Ciplox",
+    "generic": "Ciprofloxacin",
+    "category": "Antibiotics",
+    "drug_class": "Fluoroquinolone antibiotic",
+    "common_uses": [
+      "Urinary tract infection",
+      "Gastrointestinal infection",
+      "Respiratory infection"
+    ],
+    "standard_doses": [
+      "250mg",
+      "500mg",
+      "750mg"
+    ],
+    "max_daily_dose_mg": 1500,
+    "dose_per_kg_mg": 15,
+    "min_age_years": 18,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": true,
+    "hepatic_caution": false,
+    "pregnancy_category": "C",
+    "common_side_effects": [
+      "Nausea",
+      "Tendon pain",
+      "Dizziness"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Milk and dairy products",
+        "interaction_type": "reduced_absorption",
+        "severity": "MODERATE",
+        "recommendation": "Avoid taking with milk or calcium-rich foods"
+      }
+    ],
+    "aliases": [
+      "Ciprofloxacin",
+      "Ciprofloxacin",
+      "Cipro",
+      "Ciplox",
+      "Siprofloxacin"
+    ],
+    "indian_brands": [
+      "Ciplox",
+      "Cifran",
+      "Ciprobid",
+      "Ciprolet"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 68,
+    "generic_price_inr": 22
+  },
+  {
+    "brand": "Flagyl",
+    "generic": "Metronidazole",
+    "category": "Antibiotics",
+    "drug_class": "Nitroimidazole antibiotic",
+    "common_uses": [
+      "Amoebiasis",
+      "Dental infection",
+      "Anaerobic bacterial infections"
+    ],
+    "standard_doses": [
+      "200mg",
+      "400mg",
+      "500mg"
+    ],
+    "max_daily_dose_mg": 2000,
+    "dose_per_kg_mg": 20,
+    "min_age_years": 1,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": false,
+    "hepatic_caution": true,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Metallic taste",
+      "Nausea",
+      "Loss of appetite"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Alcohol",
+        "interaction_type": "disulfiram_like_reaction",
+        "severity": "SEVERE",
+        "recommendation": "Strictly avoid alcohol during and 48 hours after therapy"
+      }
+    ],
+    "aliases": [
+      "Metronidazole",
+      "Metrogel",
+      "Metrogyl",
+      "Flagyl",
+      "Metronidazol"
+    ],
+    "indian_brands": [
+      "Metrogyl",
+      "Flagyl",
+      "Metro",
+      "Metron"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 35,
+    "generic_price_inr": 10
+  },
+  {
+    "brand": "Doxy-1 LDR",
+    "generic": "Doxycycline",
+    "category": "Antibiotics",
+    "drug_class": "Tetracycline antibiotic",
+    "common_uses": [
+      "Acne",
+      "Respiratory infection",
+      "Typhus and tick-borne diseases"
+    ],
+    "standard_doses": [
+      "100mg"
+    ],
+    "max_daily_dose_mg": 200,
+    "dose_per_kg_mg": 2,
+    "min_age_years": 8,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": false,
+    "hepatic_caution": true,
+    "pregnancy_category": "D",
+    "common_side_effects": [
+      "Photosensitivity",
+      "Nausea",
+      "Esophagitis"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Milk",
+        "interaction_type": "reduced_absorption",
+        "severity": "MODERATE",
+        "recommendation": "Take away from dairy products by at least 2 hours"
+      }
+    ],
+    "aliases": [
+      "Doxycycline",
+      "Doxicycline",
+      "Doxy",
+      "Doxy 100",
+      "Doxycicline"
+    ],
+    "indian_brands": [
+      "Doxy-1 LDR",
+      "Doxicip",
+      "Doxt",
+      "Doxycin"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 78,
+    "generic_price_inr": 18
+  },
+  {
+    "brand": "Cephadex",
+    "generic": "Cephalexin",
+    "category": "Antibiotics",
+    "drug_class": "Cephalosporin antibiotic",
+    "common_uses": [
+      "Skin infection",
+      "UTI",
+      "Respiratory infection"
+    ],
+    "standard_doses": [
+      "250mg",
+      "500mg"
+    ],
+    "max_daily_dose_mg": 4000,
+    "dose_per_kg_mg": 25,
+    "min_age_years": 0,
+    "routes": [
+      "oral"
+    ],
+    "controlled_substance": false,
+    "renal_caution": true,
+    "hepatic_caution": false,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Diarrhea",
+      "Rash",
+      "Abdominal discomfort"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "None known",
+        "interaction_type": "none",
+        "severity": "SAFE",
+        "recommendation": "No specific food restrictions"
+      }
+    ],
+    "aliases": [
+      "Cephalexin",
+      "Cefalexin",
+      "Cephlexin",
+      "Cephadex",
+      "Keflex"
+    ],
+    "indian_brands": [
+      "Cephadex",
+      "Sporidex",
+      "Ceporex",
+      "Keflex"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 62,
+    "generic_price_inr": 20
+  },
+  {
+    "brand": "Septran",
+    "generic": "Co-trimoxazole",
+    "category": "Antibiotics",
+    "drug_class": "Sulfonamide antibiotic",
+    "common_uses": [
+      "UTI",
+      "Respiratory infections",
+      "Gastrointestinal infections"
+    ],
+    "standard_doses": [
+      "400mg + 80mg",
+      "800mg + 160mg"
+    ],
+    "max_daily_dose_mg": 1920,
+    "dose_per_kg_mg": 8,
+    "min_age_years": 2,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": true,
+    "hepatic_caution": true,
+    "pregnancy_category": "D",
+    "common_side_effects": [
+      "Rash",
+      "Nausea",
+      "Hyperkalemia"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "Potassium-rich foods",
+        "interaction_type": "hyperkalemia_risk",
+        "severity": "MODERATE",
+        "recommendation": "Use caution with excessive potassium intake"
+      }
+    ],
+    "aliases": [
+      "Co-trimoxazole",
+      "Cotrimoxazole",
+      "Septran",
+      "Bactrim",
+      "Cotrim"
+    ],
+    "indian_brands": [
+      "Septran",
+      "Bactrim",
+      "Cotrim",
+      "Resprim"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 48,
+    "generic_price_inr": 16
+  },
+  {
+    "brand": "Clindac",
+    "generic": "Clindamycin",
+    "category": "Antibiotics",
+    "drug_class": "Lincosamide antibiotic",
+    "common_uses": [
+      "Dental infection",
+      "Skin infection",
+      "Bone infection"
+    ],
+    "standard_doses": [
+      "150mg",
+      "300mg"
+    ],
+    "max_daily_dose_mg": 1800,
+    "dose_per_kg_mg": 10,
+    "min_age_years": 1,
+    "routes": [
+      "oral",
+      "IV"
+    ],
+    "controlled_substance": false,
+    "renal_caution": false,
+    "hepatic_caution": true,
+    "pregnancy_category": "B",
+    "common_side_effects": [
+      "Diarrhea",
+      "Nausea",
+      "C. difficile colitis"
+    ],
+    "food_interactions": [
+      {
+        "food_item": "None known",
+        "interaction_type": "none",
+        "severity": "SAFE",
+        "recommendation": "No specific food restrictions"
+      }
+    ],
+    "aliases": [
+      "Clindamycin",
+      "Clindamicin",
+      "Clinda",
+      "Clindac",
+      "Dalacin C"
+    ],
+    "indian_brands": [
+      "Clindac",
+      "Dalacin C",
+      "Clinmiskin",
+      "Clinsol"
+    ],
+    "otc_available": false,
+    "pmjay_covered": true,
+    "brand_price_inr": 95,
+    "generic_price_inr": 28
+  }
+]

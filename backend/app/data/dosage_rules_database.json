@@ -1,0 +1,41 @@
+{
+  "rules": [
+    {
+      "drug_name": "Methotrexate",
+      "generic": "Methotrexate",
+      "adult_dose": {
+        "typical_dose_mg": 7.5,
+        "max_single_dose_mg": 25.0
+      },
+      "pediatric_dose": {
+        "max_single_dose_mg": 15.0
+      },
+      "dangerous_dose_multiplier": 2.0,
+      "renal_caution": true,
+      "renal_adjustment": "Reduce dose if CrCl < 50 ml/min",
+      "pregnancy_safe": false
+    },
+    {
+      "drug_name": "Atorvastatin",
+      "generic": "Atorvastatin",
+      "adult_dose": {
+        "typical_dose_mg": 10.0,
+        "max_single_dose_mg": 80.0
+      },
+      "dangerous_dose_multiplier": 1.5,
+      "pregnancy_safe": false
+    },
+    {
+      "drug_name": "Paracetamol",
+      "generic": "Paracetamol",
+      "adult_dose": {
+        "typical_dose_mg": 500.0,
+        "max_single_dose_mg": 1000.0
+      },
+      "pediatric_dose": {
+        "max_single_dose_mg": 500.0
+      },
+      "dangerous_dose_multiplier": 4.0
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "version": "2024-04",
+  "total": 55,
+  "interactions": [
+    {
+      "drug_a": "Methotrexate", "drug_b": "Aspirin",
+      "severity": "MAJOR",
+      "mechanism": "NSAIDs reduce renal clearance of methotrexate, increasing plasma levels.",
+      "consequence": "Methotrexate toxicity: bone marrow suppression, hepatotoxicity, mucositis.",
+      "temporal_flag": "Avoid concurrent use; if unavoidable, reduce MTX dose and monitor LFTs weekly.",
+      "substitution_suggestion": "Use paracetamol for analgesia in patients on methotrexate."
+    },
+    {
+      "drug_a": "Methotrexate", "drug_b": "Ibuprofen",
+      "severity": "MAJOR",
+      "mechanism": "NSAIDs inhibit prostaglandin-mediated renal blood flow, reducing MTX clearance.",
+      "consequence": "Elevated MTX levels → severe myelosuppression and nephrotoxicity.",
+      "temporal_flag": "Avoid concurrent use.",
+      "substitution_suggestion": "Paracetamol or short-course corticosteroids preferred."
+    },
+    {
+      "drug_a": "Methotrexate", "drug_b": "Co-trimoxazole",
+      "severity": "MAJOR",
+      "mechanism": "Both drugs inhibit dihydrofolate reductase; additive antifolate effect.",
+      "consequence": "Severe megaloblastic anaemia, pancytopenia.",
+      "temporal_flag": "Contraindicated combination.",
+      "substitution_suggestion": "Use alternative antibiotics (e.g., amoxicillin) if infection requires treatment."
+    },
+    {
+      "drug_a": "Warfarin", "drug_b": "Aspirin",
+      "severity": "MAJOR",
+      "mechanism": "Pharmacodynamic synergy: dual anticoagulation + platelet inhibition.",
+      "consequence": "Significantly increased risk of major bleeding including GI and intracranial haemorrhage.",
+      "temporal_flag": "Avoid unless benefit clearly outweighs risk (e.g., mechanical heart valve).",
+      "substitution_suggestion": "Use gastroprotection with PPI if combination is clinically necessary."
+    },
+    {
+      "drug_a": "Warfarin", "drug_b": "Metronidazole",
+      "severity": "MAJOR",
+      "mechanism": "Metronidazole inhibits CYP2C9, reducing warfarin metabolism and increasing INR.",
+      "consequence": "Supratherapeutic INR, risk of bleeding.",
+      "temporal_flag": "Monitor INR closely; consider warfarin dose reduction by 25–50%.",
+      "substitution_suggestion": "Use azithromycin or doxycycline for anaerobic infections where applicable."
+    },
+    {
+      "drug_a": "Warfarin", "drug_b": "Ciprofloxacin",
+      "severity": "MODERATE",
+      "mechanism": "Ciprofloxacin inhibits CYP1A2 and CYP2C9 metabolism of warfarin.",
+      "consequence": "Elevated INR, increased bleeding risk.",
+      "temporal_flag": "Monitor INR after 2–3 days of antibiotic initiation.",
+      "substitution_suggestion": "Use amoxicillin-clavulanate if spectrum covers the indication."
+    },
+    {
+      "drug_a": "Clopidogrel", "drug_b": "Omeprazole",
+      "severity": "MODERATE",
+      "mechanism": "Omeprazole inhibits CYP2C19, reducing conversion of clopidogrel to active metabolite.",
+      "consequence": "Reduced antiplatelet effect; increased risk of cardiovascular events.",
+      "temporal_flag": "Avoid combination; use pantoprazole or rabeprazole as PPI alternative.",
+      "substitution_suggestion": "Pantoprazole has lower CYP2C19 inhibition and is preferred."
+    },
+    {
+      "drug_a": "Metformin", "drug_b": "Contrast Dye",
+      "severity": "MAJOR",
+      "mechanism": "Contrast-induced nephropathy reduces metformin excretion.",
+      "consequence": "Lactic acidosis.",
+      "temporal_flag": "Hold metformin 48 hours before and after iodinated contrast administration.",
+      "substitution_suggestion": "Resume only after confirming stable renal function post-procedure."
+    },
+    {
+      "drug_a": "Digoxin", "drug_b": "Amiodarone",
+      "severity": "MAJOR",
+      "mechanism": "Amiodarone inhibits P-glycoprotein and CYP3A4, increasing digoxin levels.",
+      "consequence": "Digoxin toxicity: bradycardia, AV block, arrhythmias.",
+      "temporal_flag": "Reduce digoxin dose by 50% when starting amiodarone; monitor levels.",
+      "substitution_suggestion": "Use bisoprolol for rate control if digoxin toxicity risk is high."
+    },
+    {
+      "drug_a": "Digoxin", "drug_b": "Furosemide",
+      "severity": "MODERATE",
+      "mechanism": "Furosemide-induced hypokalaemia potentiates digoxin toxicity.",
+      "consequence": "Increased risk of digoxin-induced arrhythmias.",
+      "temporal_flag": "Monitor potassium levels; supplement potassium as needed.",
+      "substitution_suggestion": "Add spironolactone to maintain potassium balance."
+    },
+    {
+      "drug_a": "Azathioprine", "drug_b": "Allopurinol",
+      "severity": "MAJOR",
+      "mechanism": "Allopurinol inhibits xanthine oxidase, increasing toxic azathioprine metabolites.",
+      "consequence": "Severe myelosuppression and bone marrow failure.",
+      "temporal_flag": "Contraindicated. If both required, reduce azathioprine dose by 75%.",
+      "substitution_suggestion": "Use febuxostat (lower interaction) or switch to mycophenolate."
+    },
+    {
+      "drug_a": "ACE Inhibitor", "drug_b": "Potassium-sparing diuretic",
+      "severity": "MODERATE",
+      "mechanism": "Additive hyperkalaemia from dual renin-angiotensin-aldosterone blockade.",
+      "consequence": "Hyperkalaemia: cardiac arrhythmias.",
+      "temporal_flag": "Monitor serum potassium within 1 week of combination initiation.",
+      "substitution_suggestion": "Use loop diuretics (furosemide) instead of potassium-sparing agents if possible."
+    },
+    {
+      "drug_a": "Ramipril", "drug_b": "Spironolactone",
+      "severity": "MODERATE",
+      "mechanism": "Both reduce potassium excretion via different mechanisms; additive effect.",
+      "consequence": "Hyperkalaemia, especially in renal impairment.",
+      "temporal_flag": "Monitor electrolytes weekly for first month.",
+      "substitution_suggestion": "Use furosemide for diuresis if hyperkalaemia develops."
+    },
+    {
+      "drug_a": "Ciprofloxacin", "drug_b": "Theophylline",
+      "severity": "MAJOR",
+      "mechanism": "Ciprofloxacin inhibits CYP1A2, markedly increasing theophylline levels.",
+      "consequence": "Theophylline toxicity: seizures, arrhythmias, nausea.",
+      "temporal_flag": "Monitor theophylline levels; consider dose reduction by 30–50%.",
+      "substitution_suggestion": "Use azithromycin or amoxicillin-clavulanate as antibiotics in patients on theophylline."
+    },
+    {
+      "drug_a": "Hydroxychloroquine", "drug_b": "Digoxin",
+      "severity": "MODERATE",
+      "mechanism": "HCQ increases digoxin plasma levels via P-gp inhibition.",
+      "consequence": "Risk of digoxin toxicity.",
+      "temporal_flag": "Monitor digoxin levels when starting or stopping HCQ.",
+      "substitution_suggestion": "Use bisoprolol for rate control in patients on HCQ."
+    },
+    {
+      "drug_a": "Prednisolone", "drug_b": "Metformin",
+      "severity": "MODERATE",
+      "mechanism": "Corticosteroids cause hyperglycaemia, blunting metformin effect.",
+      "consequence": "Loss of glycaemic control; steroid-induced diabetes.",
+      "temporal_flag": "Monitor blood glucose; adjust antidiabetic therapy during steroid course.",
+      "substitution_suggestion": "Add basal insulin if glucose cannot be controlled with oral agents alone."
+    },
+    {
+      "drug_a": "Prednisolone", "drug_b": "Aspirin",
+      "severity": "MODERATE",
+      "mechanism": "Both agents independently damage gastric mucosa.",
+      "consequence": "Significantly increased risk of peptic ulcer and GI bleeding.",
+      "temporal_flag": "Co-prescribe PPI (pantoprazole 40 mg OD) for gastroprotection.",
+      "substitution_suggestion": "Prefer paracetamol for analgesia over NSAIDs in patients on steroids."
+    },
+    {
+      "drug_a": "Metformin", "drug_b": "Alcohol",
+      "severity": "MODERATE",
+      "mechanism": "Alcohol inhibits gluconeogenesis and increases lactic acid production.",
+      "consequence": "Risk of lactic acidosis.",
+      "temporal_flag": "Advise patients to avoid excessive alcohol consumption.",
+      "substitution_suggestion": "Counsel patient on alcohol restriction."
+    },
+    {
+      "drug_a": "Levothyroxine", "drug_b": "Calcium Carbonate",
+      "severity": "MODERATE",
+      "mechanism": "Calcium chelates levothyroxine in the GI tract, reducing absorption.",
+      "consequence": "Reduced thyroid hormone levels; hypothyroidism.",
+      "temporal_flag": "Separate doses by at least 4 hours.",
+      "substitution_suggestion": "Take levothyroxine on empty stomach, calcium supplement after meals."
+    },
+    {
+      "drug_a": "Levothyroxine", "drug_b": "Iron Sucrose",
+      "severity": "MODERATE",
+      "mechanism": "Iron chelates levothyroxine, reducing oral absorption.",
+      "consequence": "Subtherapeutic thyroid replacement; symptomatic hypothyroidism.",
+      "temporal_flag": "Separate administration by at least 4 hours.",
+      "substitution_suggestion": "Administer levothyroxine on waking, iron with meals."
+    },
+    {
+      "drug_a": "Phenytoin", "drug_b": "Warfarin",
+      "severity": "MAJOR",
+      "mechanism": "Phenytoin initially inhibits, then induces CYP2C9 metabolism of warfarin; biphasic effect.",
+      "consequence": "Initial INR rise then fall; unpredictable anticoagulation.",
+      "temporal_flag": "Monitor INR frequently when initiating or discontinuing phenytoin.",
+      "substitution_suggestion": "Use levetiracetam (no CYP interactions) in anticoagulated patients."
+    },
+    {
+      "drug_a": "Amiodarone", "drug_b": "Warfarin",
+      "severity": "MAJOR",
+      "mechanism": "Amiodarone inhibits CYP2C9, substantially increasing warfarin effect.",
+      "consequence": "Supratherapeutic INR; major bleeding risk.",
+      "temporal_flag": "Reduce warfarin dose by 30–50% when starting amiodarone; monitor INR weekly.",
+      "substitution_suggestion": "Consider DOAC (rivaroxaban/dabigatran) if amiodarone is long-term."
+    },
+    {
+      "drug_a": "Carbamazepine", "drug_b": "Oral Contraceptive",
+      "severity": "MAJOR",
+      "mechanism": "Carbamazepine induces CYP3A4, accelerating oestrogen and progestogen metabolism.",
+      "consequence": "Contraceptive failure; unintended pregnancy.",
+      "temporal_flag": "Use alternative contraception (IUCD, barrier methods).",
+      "substitution_suggestion": "Switch to lamotrigine or levetiracetam if epilepsy control is adequate."
+    },
+    {
+      "drug_a": "Lithium", "drug_b": "Ibuprofen",
+      "severity": "MAJOR",
+      "mechanism": "NSAIDs reduce prostaglandin-mediated renal lithium excretion.",
+      "consequence": "Lithium toxicity: tremor, confusion, renal failure.",
+      "temporal_flag": "Avoid NSAIDs in patients on lithium; monitor lithium levels if unavoidable.",
+      "substitution_suggestion": "Use paracetamol for analgesia."
+    },
+    {
+      "drug_a": "Sildenafil", "drug_b": "Nitroglycerin",
+      "severity": "MAJOR",
+      "mechanism": "Additive nitric oxide-mediated vasodilation causing profound hypotension.",
+      "consequence": "Severe hypotension, syncope, myocardial ischaemia.",
+      "temporal_flag": "Absolute contraindication. Do not combine.",
+      "substitution_suggestion": "Use amlodipine for angina in patients using PDE-5 inhibitors."
+    },
+    {
+      "drug_a": "Atorvastatin", "drug_b": "Clarithromycin",
+      "severity": "MAJOR",
+      "mechanism": "Clarithromycin inhibits CYP3A4, substantially increasing atorvastatin levels.",
+      "consequence": "Myopathy, rhabdomyolysis.",
+      "temporal_flag": "Hold atorvastatin during clarithromycin course, or switch to pravastatin.",
+      "substitution_suggestion": "Pravastatin and rosuvastatin are not CYP3A4 substrates and are safer alternatives."
+    },
+    {
+      "drug_a": "Simvastatin", "drug_b": "Amiodarone",
+      "severity": "MAJOR",
+      "mechanism": "Amiodarone inhibits CYP3A4, raising simvastatin levels.",
+      "consequence": "Myopathy, rhabdomyolysis.",
+      "temporal_flag": "Limit simvastatin to 20 mg/day; prefer rosuvastatin.",
+      "substitution_suggestion": "Switch to rosuvastatin or pravastatin."
+    },
+    {
+      "drug_a": "Azithromycin", "drug_b": "Hydroxychloroquine",
+      "severity": "MAJOR",
+      "mechanism": "Both drugs prolong QTc interval; additive cardiac risk.",
+      "consequence": "Torsades de pointes, ventricular arrhythmia.",
+      "temporal_flag": "Avoid combination; monitor ECG if unavoidable.",
+      "substitution_suggestion": "Use doxycycline or amoxicillin instead of azithromycin."
+    },
+    {
+      "drug_a": "Dapagliflozin", "drug_b": "Furosemide",
+      "severity": "MODERATE",
+      "mechanism": "Additive diuresis leading to volume depletion.",
+      "consequence": "Dehydration, hypotension, acute kidney injury.",
+      "temporal_flag": "Monitor blood pressure, renal function, and hydration status.",
+      "substitution_suggestion": "Reduce furosemide dose when initiating SGLT2 inhibitor."
+    },
+    {
+      "drug_a": "Metformin", "drug_b": "Dapagliflozin",
+      "severity": "MINOR",
+      "mechanism": "Complementary glucose-lowering mechanisms; no pharmacokinetic interaction.",
+      "consequence": "Risk of hypoglycaemia if sulphonylurea also co-prescribed.",
+      "temporal_flag": "Monitor glucose; note that SGLT2i alone rarely cause hypoglycaemia.",
+      "substitution_suggestion": "Safe combination — consider reducing sulphonylurea if co-prescribed."
+    },
+    {
+      "drug_a": "Clopidogrel", "drug_b": "Aspirin",
+      "severity": "MODERATE",
+      "mechanism": "Dual antiplatelet therapy: additive bleeding risk.",
+      "consequence": "Significantly increased risk of GI bleeding.",
+      "temporal_flag": "Co-prescribe PPI (pantoprazole preferred over omeprazole).",
+      "substitution_suggestion": "Duration of dual antiplatelet therapy should follow ACS/PCI guidelines."
+    },
+    {
+      "drug_a": "Rivaroxaban", "drug_b": "Aspirin",
+      "severity": "MODERATE",
+      "mechanism": "Additive anticoagulant + antiplatelet effect increases bleeding risk.",
+      "consequence": "Major GI and intracranial haemorrhage.",
+      "temporal_flag": "Limit to evidence-based indications (e.g., COMPASS trial doses).",
+      "substitution_suggestion": "Use gastroprotection; reassess dual therapy indication regularly."
+    },
+    {
+      "drug_a": "Vildagliptin", "drug_b": "ACE Inhibitor",
+      "severity": "MODERATE",
+      "mechanism": "DPP-4 inhibitors increase bradykinin levels, potentiating ACE inhibitor-induced cough.",
+      "consequence": "Worsening cough, rarely angioedema.",
+      "temporal_flag": "If cough worsens, consider switching ACE inhibitor to ARB (telmisartan/losartan).",
+      "substitution_suggestion": "Telmisartan does not affect bradykinin pathway."
+    },
+    {
+      "drug_a": "Colchicine", "drug_b": "Clarithromycin",
+      "severity": "MAJOR",
+      "mechanism": "Clarithromycin inhibits P-gp and CYP3A4, substantially increasing colchicine exposure.",
+      "consequence": "Colchicine toxicity: multi-organ failure, neuromuscular toxicity.",
+      "temporal_flag": "Reduce colchicine dose by 50% or avoid combination.",
+      "substitution_suggestion": "Use alternative antibiotic; if unavoidable, hold colchicine during antibiotic course."
+    },
+    {
+      "drug_a": "Cyclosporine", "drug_b": "Tacrolimus",
+      "severity": "MAJOR",
+      "mechanism": "Additive calcineurin inhibition; pharmacokinetic interactions via P-gp and CYP3A4.",
+      "consequence": "Nephrotoxicity, neurotoxicity.",
+      "temporal_flag": "Contraindicated combination in most protocols.",
+      "substitution_suggestion": "Use monotherapy with therapeutic drug monitoring."
+    },
+    {
+      "drug_a": "Cyclosporine", "drug_b": "Atorvastatin",
+      "severity": "MAJOR",
+      "mechanism": "Cyclosporine inhibits OATP1B1 and CYP3A4, markedly increasing statin exposure.",
+      "consequence": "Rhabdomyolysis.",
+      "temporal_flag": "Use lowest possible statin dose; avoid high-dose statins.",
+      "substitution_suggestion": "Pravastatin is preferred (minimal CYP metabolism) in transplant patients."
+    },
+    {
+      "drug_a": "Leflunomide", "drug_b": "Methotrexate",
+      "severity": "MODERATE",
+      "mechanism": "Additive hepatotoxicity.",
+      "consequence": "Elevated liver enzymes, hepatitis.",
+      "temporal_flag": "Monitor LFTs monthly; avoid in patients with pre-existing liver disease.",
+      "substitution_suggestion": "Combination used in refractory RA but requires close LFT monitoring."
+    },
+    {
+      "drug_a": "Phenytoin", "drug_b": "Sodium Valproate",
+      "severity": "MODERATE",
+      "mechanism": "Valproate displaces phenytoin from protein binding and inhibits its metabolism.",
+      "consequence": "Phenytoin toxicity (nystagmus, ataxia) despite normal total levels.",
+      "temporal_flag": "Monitor free phenytoin levels, not total phenytoin.",
+      "substitution_suggestion": "Consider alternative AED combinations with neurologist guidance."
+    },
+    {
+      "drug_a": "Pregabalin", "drug_b": "Alprazolam",
+      "severity": "MODERATE",
+      "mechanism": "Additive CNS depression.",
+      "consequence": "Excessive sedation, respiratory depression.",
+      "temporal_flag": "Avoid combination if possible; use minimum effective doses.",
+      "substitution_suggestion": "Use SSRI for anxiety in patients requiring pregabalin for neuropathic pain."
+    },
+    {
+      "drug_a": "Amitriptyline", "drug_b": "Tramadol",
+      "severity": "MAJOR",
+      "mechanism": "Both drugs lower seizure threshold; additive serotonergic effect.",
+      "consequence": "Serotonin syndrome, seizures.",
+      "temporal_flag": "Avoid combination.",
+      "substitution_suggestion": "Use paracetamol or NSAIDs for pain in patients on amitriptyline."
+    },
+    {
+      "drug_a": "Sertraline", "drug_b": "Tramadol",
+      "severity": "MAJOR",
+      "mechanism": "Additive serotonergic activity.",
+      "consequence": "Serotonin syndrome: hyperthermia, myoclonus, agitation.",
+      "temporal_flag": "Avoid combination; use non-opioid analgesia.",
+      "substitution_suggestion": "Paracetamol or NSAIDs preferred for pain."
+    },
+    {
+      "drug_a": "Escitalopram", "drug_b": "Azithromycin",
+      "severity": "MAJOR",
+      "mechanism": "Both drugs prolong QTc; additive cardiac risk.",
+      "consequence": "Torsades de pointes.",
+      "temporal_flag": "Avoid if possible; ECG monitoring mandatory if combined.",
+      "substitution_suggestion": "Use amoxicillin or doxycycline instead of azithromycin."
+    },
+    {
+      "drug_a": "Olanzapine", "drug_b": "Metformin",
+      "severity": "MODERATE",
+      "mechanism": "Olanzapine causes metabolic syndrome, insulin resistance, and weight gain.",
+      "consequence": "Poor glycaemic control; worsening diabetes.",
+      "temporal_flag": "Monitor HbA1c and fasting glucose every 3 months.",
+      "substitution_suggestion": "Aripiprazole has lower metabolic liability; discuss with psychiatrist."
+    },
+    {
+      "drug_a": "Rifampicin", "drug_b": "Warfarin",
+      "severity": "MAJOR",
+      "mechanism": "Rifampicin is a potent CYP2C9 inducer, greatly accelerating warfarin metabolism.",
+      "consequence": "Subtherapeutic INR; thromboembolic events.",
+      "temporal_flag": "Increase warfarin dose substantially; monitor INR every 3–5 days until stable.",
+      "substitution_suggestion": "Use DOAC if TB treatment requires rifampicin (note: some DOACs also interact)."
+    },
+    {
+      "drug_a": "Rifampicin", "drug_b": "Levothyroxine",
+      "severity": "MODERATE",
+      "mechanism": "Rifampicin induces CYP enzymes and increases glucuronidation of T4.",
+      "consequence": "Hypothyroidism.",
+      "temporal_flag": "Increase levothyroxine dose; monitor TSH monthly during TB treatment.",
+      "substitution_suggestion": "Resume pre-treatment dose when rifampicin is stopped."
+    },
+    {
+      "drug_a": "Doxycycline", "drug_b": "Calcium Carbonate",
+      "severity": "MODERATE",
+      "mechanism": "Divalent calcium ions chelate doxycycline, reducing oral absorption by up to 80%.",
+      "consequence": "Antibiotic treatment failure.",
+      "temporal_flag": "Separate administration by at least 2–3 hours.",
+      "substitution_suggestion": "Take doxycycline on empty stomach; administer calcium after meals."
+    },
+    {
+      "drug_a": "Ciprofloxacin", "drug_b": "Calcium Carbonate",
+      "severity": "MODERATE",
+      "mechanism": "Calcium chelates ciprofloxacin reducing absorption.",
+      "consequence": "Reduced antibiotic efficacy.",
+      "temporal_flag": "Separate by at least 2 hours.",
+      "substitution_suggestion": "Administer ciprofloxacin 2 hours before calcium supplement."
+    },
+    {
+      "drug_a": "Metformin", "drug_b": "Furosemide",
+      "severity": "MODERATE",
+      "mechanism": "Furosemide increases metformin plasma levels by reducing renal tubular secretion.",
+      "consequence": "Increased metformin levels; lactic acidosis risk in renal impairment.",
+      "temporal_flag": "Monitor renal function; adjust metformin dose in deteriorating kidney function.",
+      "substitution_suggestion": "Hold metformin if eGFR falls below 30 mL/min/1.73 m²."
+    },
+    {
+      "drug_a": "Telmisartan", "drug_b": "Ramipril",
+      "severity": "MAJOR",
+      "mechanism": "Dual RAAS blockade: additive hyperkalaemia, hypotension, and renal impairment.",
+      "consequence": "Acute kidney injury, severe hyperkalaemia.",
+      "temporal_flag": "Avoid combination (ONTARGET trial evidence).",
+      "substitution_suggestion": "Use single RAAS agent at optimal dose."
+    },
+    {
+      "drug_a": "Gabapentin", "drug_b": "Morphine",
+      "severity": "MODERATE",
+      "mechanism": "Pharmacokinetic interaction: morphine increases gabapentin absorption.",
+      "consequence": "Enhanced CNS depression, respiratory depression.",
+      "temporal_flag": "Use lowest effective doses; monitor respiratory rate.",
+      "substitution_suggestion": "Consider non-opioid pain adjuncts (duloxetine, amitriptyline) for neuropathic pain."
+    },
+    {
+      "drug_a": "Allopurinol", "drug_b": "Ampicillin",
+      "severity": "MODERATE",
+      "mechanism": "Allopurinol increases risk of ampicillin-induced skin rash.",
+      "consequence": "Maculopapular skin rash (not allergic).",
+      "temporal_flag": "Monitor for rash; usually not contraindicated but awareness required.",
+      "substitution_suggestion": "Use cephalosporins if rash is a clinical concern."
+    },
+    {
+      "drug_a": "Sodium Valproate", "drug_b": "Lamotrigine",
+      "severity": "MODERATE",
+      "mechanism": "Valproate inhibits glucuronidation of lamotrigine, doubling its half-life.",
+      "consequence": "Lamotrigine toxicity: dizziness, diplopia, ataxia.",
+      "temporal_flag": "Reduce lamotrigine dose by 50% when adding valproate.",
+      "substitution_suggestion": "Titrate lamotrigine slowly in the presence of valproate."
+    },
+    {
+      "drug_a": "Carbamazepine", "drug_b": "Erythromycin",
+      "severity": "MAJOR",
+      "mechanism": "Erythromycin inhibits CYP3A4, substantially increasing carbamazepine levels.",
+      "consequence": "Carbamazepine toxicity: diplopia, ataxia, drowsiness.",
+      "temporal_flag": "Avoid combination; monitor carbamazepine levels if unavoidable.",
+      "substitution_suggestion": "Use azithromycin (1 dose) if antibiotic is required — shorter interaction window."
+    },
+    {
+      "drug_a": "Hydroxychloroquine", "drug_b": "Methotrexate",
+      "severity": "MINOR",
+      "mechanism": "No clinically significant pharmacokinetic interaction.",
+      "consequence": "Potential additive immunosuppression; monitor for toxicity.",
+      "temporal_flag": "Used together in triple DMARD therapy; monitor LFTs and CBC.",
+      "substitution_suggestion": "Standard combination in RA; no dose adjustment required."
+    }
+  ]
+}
