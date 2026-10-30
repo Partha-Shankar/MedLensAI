@@ -1,128 +1,189 @@
 # MedLens AI
 
-<div align="center">
-  <a href="https://youtu.be/-zR9KAvdFew">
-    <img src="https://img.shields.io/badge/YouTube-Watch_Full_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube" />
-  </a>
-  <br />
-  <strong>🚀 Witness the Future of Clinical Safety: See how MedLens AI turns illegible prescriptions into life-saving insights within seconds!</strong>
-</div>
+[![Watch the demo on YouTube](https://img.shields.io/badge/YouTube-Watch%20Demo-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/-zR9KAvdFew)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash-4285F4?style=flat-square&logo=googlegemini&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-MedLens AI is a comprehensive, full-stack clinical decision support application designed specifically for the Indian healthcare market. It addresses the critical intersection of handwritten prescription legibility, patient medication safety, and insurance opacity that creates preventable harm every day.
+A prescription digitizer and conflict checker for the Indian healthcare context. MedLens AI reads handwritten prescriptions with a vision model, corrects drug names, and checks the result for drug interactions, dosage problems, and food warnings.
 
-Built with a modern React frontend and a fast Python backend powered by Gemini 2.5 Flash OCR, MedLens AI acts as a digital health assistant. It digitizes paper prescriptions, corrects errors, and runs a multi-layer clinical analysis pipeline—all within seconds.
+> **Disclaimer:** MedLens AI is a software project, not a medical device. Its output can contain errors and must be verified by a qualified doctor or pharmacist before any medication decision.
 
----
+## Overview
 
-## 🌟 The Problem We Solve
+Handwritten prescriptions can be difficult for patients to read and verify. MedLens AI turns a prescription image into structured data, then runs it through a series of clinical checks and presents the results in plain language, including a daily medication timeline. Users can also keep their prescription history and a shareable emergency medical card.
 
-India processes an estimated 4.7 billion prescriptions per year, the vast majority of which are handwritten. This leads to three major gaps in healthcare:
-1. **Prescription Illegibility:** Ambiguous handwriting, Latin abbreviations (OD, BD, TDS), and reliance on brand names make it difficult for patients to verify what they are taking.
-2. **Patient Self-Medication Danger:** High rates of OTC drug use (like aspirin or antacids) combined with concurrent prescriptions often lead to clinically dangerous drug combinations.
-3. **Insurance Opacity:** Patients frequently purchase expensive brand-name drugs at full price because they don't know that their insurance schemes (PMJAY, CGHS, ESI) cover generic equivalents at 50-90% lower costs.
+## Key Features
 
----
+- **Prescription OCR:** extracts patient details, prescriber, drugs, dosage, frequency, and duration using Gemini 2.5 Flash
+- **Drug name correction:** fuzzy matching against an index of 252 drugs used in India, using RapidFuzz
+- **Interaction detection:** checks drug combinations against a curated database of 217 interaction records
+- **Dosage sanity checks:** rule-based validation, with Groq as a fallback for drugs outside the rules
+- **Food warnings:** dietary precautions for the prescribed drugs
+- **Medication timeline:** converts shorthand such as BID or 1-0-1 into a daily schedule
+- **Insurance summary:** coverage information and generic alternatives
+- **Prescription validity check:** evaluates the completeness of a prescription
+- **User accounts:** login, prescription history, and a health profile
+- **Emergency medical card:** a public card page accessible through a QR code
 
-## ✨ Core Capabilities
+## Technology Stack
 
-1. **AI Prescription OCR:** Uses Google's Gemini 2.5 Flash vision model to instantly digitize handwritten Indian prescriptions. It extracts patient name, doctor's credentials, drug names, dosage, frequency, and duration.
-2. **Drug-Drug Interaction Detection:** Checks every combination of extracted drugs against a curated database to warn about Critical, Moderate, or Minor interactions. Includes brand-to-generic resolution.
-3. **Dosage Sanity Validation:** Ensures the prescribed dose is plausible and safe given the drug type, patient context, and specific pediatric/adult rules. Falls back to Groq Llama3 for unknown drugs.
-4. **Food-Drug Warnings:** Automatically retrieves and displays dietary restrictions (e.g., avoiding dairy with certain antibiotics).
-5. **Smart Drug Name Correction:** Utilizes an Indian-specific drug database and fuzzy matching (via RapidFuzz & RxNorm API) to automatically correct spelling or OCR errors. Includes a Ghost Correction UI for manual overrides.
-6. **Timeline Engine:** Converts medical shorthand (like *BID* or *1-0-1*) into a clear 24-hour graphical timeline for patients.
-7. **Insurance & Formulary Engine:** Checks if medicines are covered by standard medical insurance and highlights potential savings by suggesting generic equivalents from Jan Aushadhi.
-8. **Family Health Locker & Emergency Card:** A secure digital profile system to save medication history. It generates a publicly accessible QR-code-based medical card containing a patient's critical health data and emergency contacts.
-9. **RxGuard Clinical Chatbot:** An embedded conversational AI assistant powered by Groq (llama3-8b-8192). It understands your current medication profile and provides personalized medication safety guidance.
+| Layer | Technology |
+| --- | --- |
+| Frontend | React 19, TypeScript, Vite, Tailwind CSS 4, React Router |
+| Backend | FastAPI, Uvicorn, Pydantic |
+| Database | SQLite, SQLAlchemy |
+| AI services | Google Gemini 2.5 Flash, Groq (`llama3-8b-8192`) |
+| Text matching | RapidFuzz |
+| Image handling | OpenCV, Pillow, pypdfium2 |
+| Authentication | JSON Web Tokens, bcrypt |
 
----
-
-## 🏗️ System Architecture & Design Philosophy
-
-MedLens AI is built on a strict **decoupled client-server architecture**. The React Single Page Application (SPA) running in the browser has no direct knowledge of AI APIs, database connections, or drug databases. All sensitive logic lives exclusively in the FastAPI backend process.
-
-### Frontend Deep Dive
-- **React 19.2 & TypeScript 6.0:** Leverages React 19's concurrent rendering features and Suspense for smooth loading states without blocking the UI. TypeScript is configured in strict mode to ensure type safety across all clinical data components.
-- **Vite 8.0:** Used for the development server with HMR and highly optimized production builds.
-- **Tailwind CSS v4:** We built a custom enterprise clinical theme with a **Deep Navy** (`#0A1628`) and **Golden Amber** (`#F59E0B`) palette, using semantic colors for safety badges (critical, moderate, safe).
-- **React Router v7:** Handles SPA routing between the upload wizard, the dashboard, profile management, and public emergency cards.
-
-### Backend Deep Dive
-- **FastAPI 0.111 & Uvicorn 0.29:** An async-first backend allowing multiple concurrent external API calls without blocking. All API responses follow strict Pydantic v2 schemas.
-- **SQLite & SQLAlchemy ORM:** A lightweight, file-based SQL database for storing prescription history, user profiles, and chat sessions with zero configuration needed.
-- **AI Integrations:**
-  - **Google Gemini 2.5 Flash:** Chosen for its speed (sub-2-second OCR response) and cost-effectiveness. Processes image payloads to extract structured JSON data.
-  - **Groq (llama3-8b-8192):** Used for low-latency dosage validation fallbacks, interaction enrichment, and the RxGuard conversational assistant.
-- **Resilient Error Handling:** The application never blocks the clinical flow due to an AI failure. Fallbacks are built-in for every service.
-
----
-
-## 📸 Screenshots
-
-We have designed a clean, intuitive, and professional UI tailored for both patients and pharmacists. Place your screenshot files in the `screenshots` folder and name them accordingly.
-
-### Clinical Report Dashboard
-*(Upload your clinical report screenshot here)*
-![Clinical Report](screenshots/clinical-report.png)
-
-### Drug Interaction Alerts
-*(Upload your drug interaction screenshot here)*
-![Drug Interaction Alerts](screenshots/drug-interaction.png)
-
-### RxGuard Clinical Chatbot
-*(Upload your chatbot screenshot here)*
-![RxGuard Chatbot](screenshots/chatbot.png)
-
----
-
-## 📊 Architecture Diagrams
-
-We have documented the system flows to give a clear understanding of the backend and AI integration processes. Place your diagram PNG files in the `architecture` folder and name them accordingly.
+## Architecture and Workflow
 
 ### Overall System Architecture
-*(Upload your overall system architecture diagram here)*
-![Overall System Architecture](architecture/overall-architecture.png)
 
-### OCR & Extraction Pipeline
-*(Upload your OCR pipeline diagram here)*
-![OCR & Extraction Pipeline](architecture/ocr-pipeline.png)
+![Overall system architecture](architecture/overall-architecture.png)
+
+### OCR and Extraction Pipeline
+
+![OCR and extraction pipeline](architecture/ocr-pipeline.png)
 
 ### RxGuard Chatbot Architecture
-*(Upload your chatbot architecture diagram here)*
-![RxGuard Chatbot Architecture](architecture/chatbot-architecture.png)
 
----
+![RxGuard chatbot architecture](architecture/chatbot-architecture.png)
 
-## 🚀 Getting Started
+## Project Structure
 
-Follow these steps to run MedLens AI locally:
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/MedLens.git
-cd MedLens
+```text
+MedLensAI/
+├── backend/
+│   ├── app/
+│   │   ├── api/routes.py      API routes
+│   │   ├── core/config.py     Application settings
+│   │   ├── data/              Drug, interaction, and dosage data
+│   │   ├── schemas/           Pydantic models
+│   │   ├── services/          OCR, validation, and clinical checks
+│   │   └── main.py            Application entry point
+│   ├── .env.example
+│   └── requirements.txt
+├── frontend/
+│   └── src/
+│       ├── components/        Upload, processing, and results screens
+│       ├── hooks/             Authentication hook
+│       └── pages/             Application pages
+├── architecture/              Architecture diagrams
+└── screenshots/               Application screenshots
 ```
 
-### 2. Backend Setup
-Navigate to the `backend` folder, install dependencies, and start the server:
+## Installation and Setup
+
+### Prerequisites
+
+- Python 3 and Node.js
+- A Google Gemini API key and a Groq API key
+
+### Backend
+
 ```bash
 cd backend
 python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
+```
 
+Activate the virtual environment:
+
+```bash
+source venv/bin/activate      # Linux and macOS
+venv\Scripts\activate         # Windows
+```
+
+Install the dependencies, create the configuration file, and start the server:
+
+```bash
 pip install -r requirements.txt
-cp .env.example .env  # Add your GEMINI_API_KEY and GROQ_API_KEY
+cp .env.example .env
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### 3. Frontend Setup
-Open a new terminal, navigate to the `frontend` folder, install dependencies, and start the Vite dev server:
+### Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-The frontend will be available at `http://localhost:5173`.
+
+The application runs at `http://localhost:5173`.
+
+The frontend imports its API client and shared types from `frontend/src/lib/`, which the root `.gitignore` currently excludes. This directory must be present for the frontend to compile.
+
+## Configuration
+
+| Variable | Location | Purpose |
+| --- | --- | --- |
+| `GEMINI_API_KEY` | `backend/.env` | Prescription OCR and medical card generation |
+| `GROQ_API_KEY` | `backend/.env` | Dosage validation fallback |
+| `VITE_RXGUARD_URL` | Frontend environment | Address of the RxGuard chat service |
+
+## Usage
+
+1. Create an account and log in.
+2. Upload a photo of a prescription.
+3. Review and confirm the extracted details, correcting anything that was misread.
+4. Review the interaction, dosage, and food warnings, along with the medication timeline.
+
+### API Reference
+
+All routes use the `/api/v1` prefix, except `/health`.
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| POST | `/extract` | Run the OCR pipeline on a prescription |
+| POST | `/validate-dosage` | Validate dosage plausibility |
+| GET | `/interactions` | Look up interaction data |
+| POST | `/check-dosage-sanity` | Check dosage for each drug |
+| POST | `/check-interactions` | Detect drug conflicts |
+| POST | `/check-prescription-validity` | Evaluate prescription validity |
+| GET | `/drug-food-warnings` | Retrieve food warnings |
+| GET | `/insurance-summary` | Retrieve insurance information |
+| GET | `/timeline` | Build a medication timeline |
+| POST | `/auth/signup`, `/auth/login` | Create an account or log in |
+| GET | `/auth/me` | Retrieve the current user |
+| GET | `/history` | Retrieve prescription history |
+| GET, PUT | `/profile` | Read or update the health profile |
+| GET | `/public/medical-card/{user_id}` | Retrieve a public medical card |
+
+## Technical Implementation
+
+### Client-Server Separation
+
+API keys and clinical logic stay in the FastAPI backend, and the browser communicates only through its REST API. Responses are defined with Pydantic schemas.
+
+### Clinical Data
+
+Drug names, interactions, and dosage rules are stored as JSON files in `backend/app/data`, so they can be reviewed and extended without changing the code.
+
+### RxGuard Chat
+
+The frontend includes an RxGuard chat interface, which connects to a separate service configured through `VITE_RXGUARD_URL`. The source of that service is not included in this repository.
+
+## Screenshots
+
+### Clinical Report
+
+![Clinical report](screenshots/clinical-report.png)
+
+### Drug Interaction Alerts
+
+![Drug interaction alerts](screenshots/drug-interaction.png)
+
+### RxGuard Chat
+
+![RxGuard chat](screenshots/chatbot.png)
+
+## Future Scope
+
+- Expanded drug and interaction coverage
+- Clinical review of the interaction and dosage data
+- Support for additional languages
